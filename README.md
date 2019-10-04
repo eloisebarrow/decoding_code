@@ -2,7 +2,9 @@
 
 ## Project Description
 
-Decoding Code is a study guide for software engineering students. On arriving at the site, users can browse 
+Decoding Code is a study guide for software engineering students. On arriving at the site, users can browse all topics, or decks, and peruse one or more topics to study. Each deck has dedicated flashcards with a prompt on one side (a term or question) and an answer (definition or explanation) on the other side. 
+
+For more in depth studying, users can create an account to save decks they want to revisit as well as create their own decks. 
 
 Scope: 
 
