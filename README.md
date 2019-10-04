@@ -18,7 +18,6 @@ Topics will include:
 - PostgreSQL
 - Ruby on Rails
 - Git and Github
-- Data Types
 
 This website will be built mobile-first with a React front end, a Rails backend and the database will be built using PostgreSQL.
 
@@ -102,6 +101,7 @@ Backend:
 - Axios
 - JSON Web Token
 - CORS
+- bcrypt
 
 Frontend:
 - React Router
