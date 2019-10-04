@@ -56,3 +56,391 @@ FOREIGN KEY ("deck_id")
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mDeck Create (44.8ms)[0m  [1m[32mINSERT INTO "decks" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2019-10-04 19:33:30.924057"], ["updated_at", "2019-10-04 19:33:30.924057"]]
   [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (2.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "General Programming"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.449755"], ["updated_at", "2019-10-04 19:38:13.449755"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.5ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "HTML"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.458864"], ["updated_at", "2019-10-04 19:38:13.458864"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.4ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "CSS"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.466260"], ["updated_at", "2019-10-04 19:38:13.466260"]]
+  [1m[35m (41.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.5ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "JavaScript"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.527722"], ["updated_at", "2019-10-04 19:38:13.527722"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.6ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "React"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.536167"], ["updated_at", "2019-10-04 19:38:13.536167"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.4ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "React"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.542585"], ["updated_at", "2019-10-04 19:38:13.542585"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "Express.js"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.548166"], ["updated_at", "2019-10-04 19:38:13.548166"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "Node.js"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.553043"], ["updated_at", "2019-10-04 19:38:13.553043"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "PostgreSQL"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.557842"], ["updated_at", "2019-10-04 19:38:13.557842"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "Ruby on Rails"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.562773"], ["updated_at", "2019-10-04 19:38:13.562773"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (2.2ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "Data Types"], ["is_public", true], ["created_at", "2019-10-04 19:38:13.568388"], ["updated_at", "2019-10-04 19:38:13.568388"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (276.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "decoding_code_development"[0m
+  [1m[35m (225.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "decoding_code_test"[0m
+  [1m[35m (841.6ms)[0m  [1m[35mCREATE DATABASE "decoding_code_development" ENCODING = 'unicode'[0m
+  [1m[35m (646.2ms)[0m  [1m[35mCREATE DATABASE "decoding_code_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (82.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (567.7ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "prompt" character varying, "answer" character varying, "is_public" boolean, "deck_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (64.1ms)[0m  [1m[35mCREATE  INDEX  "index_cards_on_deck_id" ON "cards"  ("deck_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "decks" CASCADE[0m
+  [1m[35m (46.0ms)[0m  [1m[35mCREATE TABLE "decks" ("id" bigserial primary key, "topic" character varying, "is_public" boolean, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_decks_on_user_id" ON "decks"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "faves" CASCADE[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "faves" ("id" bigserial primary key, "user_id" bigint, "deck_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_faves_on_deck_id" ON "faves"  ("deck_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_faves_on_user_id" ON "faves"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (36.6ms)[0m  [1m[35mALTER TABLE "cards" ADD CONSTRAINT "fk_rails_6c4effce17"
+FOREIGN KEY ("deck_id")
+  REFERENCES "decks" ("id")
+[0m
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE "decks" ADD CONSTRAINT "fk_rails_5d31349cbe"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (6.5ms)[0m  [1m[35mALTER TABLE "faves" ADD CONSTRAINT "fk_rails_adb567e758"
+FOREIGN KEY ("deck_id")
+  REFERENCES "decks" ("id")
+[0m
+  [1m[35m (5.5ms)[0m  [1m[35mALTER TABLE "faves" ADD CONSTRAINT "fk_rails_42ff367847"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191004191559)[0m
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191004190700),
+(20191004190900),
+(20191004191000);
+
+[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-04 21:44:41.193785"], ["updated_at", "2019-10-04 21:44:41.193785"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "945a6d246d4279f2f9531aea1556a85a71dc1606"], ["created_at", "2019-10-04 21:44:41.205304"], ["updated_at", "2019-10-04 21:44:41.205304"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "prompt" character varying, "answer" character varying, "is_public" boolean, "deck_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_cards_on_deck_id" ON "cards"  ("deck_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "decks" CASCADE[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "decks" ("id" bigserial primary key, "topic" character varying, "is_public" boolean, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_decks_on_user_id" ON "decks"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "faves" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "faves" ("id" bigserial primary key, "user_id" bigint, "deck_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_faves_on_deck_id" ON "faves"  ("deck_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_faves_on_user_id" ON "faves"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "cards" ADD CONSTRAINT "fk_rails_6c4effce17"
+FOREIGN KEY ("deck_id")
+  REFERENCES "decks" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "decks" ADD CONSTRAINT "fk_rails_5d31349cbe"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "faves" ADD CONSTRAINT "fk_rails_adb567e758"
+FOREIGN KEY ("deck_id")
+  REFERENCES "decks" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "faves" ADD CONSTRAINT "fk_rails_42ff367847"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191004191559)[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191004190700),
+(20191004190900),
+(20191004191000);
+
+[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-04 21:44:41.410165"], ["updated_at", "2019-10-04 21:44:41.410165"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-10-04 21:44:41.417301"], ["key", "environment"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "945a6d246d4279f2f9531aea1556a85a71dc1606"], ["created_at", "2019-10-04 21:44:41.423699"], ["updated_at", "2019-10-04 21:44:41.423699"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (56.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (229.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "decoding_code_development"[0m
+  [1m[35m (201.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "decoding_code_test"[0m
+  [1m[35m (676.0ms)[0m  [1m[35mCREATE DATABASE "decoding_code_development" ENCODING = 'unicode'[0m
+  [1m[35m (965.5ms)[0m  [1m[35mCREATE DATABASE "decoding_code_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "prompt" character varying, "answer" character varying, "is_public" boolean, "deck_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_cards_on_deck_id" ON "cards"  ("deck_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "decks" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "decks" ("id" bigserial primary key, "topic" character varying, "is_public" boolean, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_decks_on_user_id" ON "decks"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "faves" CASCADE[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "faves" ("id" bigserial primary key, "user_id" bigint, "deck_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_faves_on_deck_id" ON "faves"  ("deck_id")[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE  INDEX  "index_faves_on_user_id" ON "faves"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mALTER TABLE "cards" ADD CONSTRAINT "fk_rails_6c4effce17"
+FOREIGN KEY ("deck_id")
+  REFERENCES "decks" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "decks" ADD CONSTRAINT "fk_rails_5d31349cbe"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "faves" ADD CONSTRAINT "fk_rails_adb567e758"
+FOREIGN KEY ("deck_id")
+  REFERENCES "decks" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "faves" ADD CONSTRAINT "fk_rails_42ff367847"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (23.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191004191559)[0m
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191004190700),
+(20191004190900),
+(20191004191000);
+
+[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-04 21:45:35.070479"], ["updated_at", "2019-10-04 21:45:35.070479"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "945a6d246d4279f2f9531aea1556a85a71dc1606"], ["created_at", "2019-10-04 21:45:35.080474"], ["updated_at", "2019-10-04 21:45:35.080474"]]
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cards" CASCADE[0m
+  [1m[35m (22.6ms)[0m  [1m[35mCREATE TABLE "cards" ("id" bigserial primary key, "prompt" character varying, "answer" character varying, "is_public" boolean, "deck_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_cards_on_deck_id" ON "cards"  ("deck_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "decks" CASCADE[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "decks" ("id" bigserial primary key, "topic" character varying, "is_public" boolean, "user_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_decks_on_user_id" ON "decks"  ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "faves" CASCADE[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "faves" ("id" bigserial primary key, "user_id" bigint, "deck_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_faves_on_deck_id" ON "faves"  ("deck_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_faves_on_user_id" ON "faves"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "cards" ADD CONSTRAINT "fk_rails_6c4effce17"
+FOREIGN KEY ("deck_id")
+  REFERENCES "decks" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "decks" ADD CONSTRAINT "fk_rails_5d31349cbe"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "faves" ADD CONSTRAINT "fk_rails_adb567e758"
+FOREIGN KEY ("deck_id")
+  REFERENCES "decks" ("id")
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "faves" ADD CONSTRAINT "fk_rails_42ff367847"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191004191559)[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191004190700),
+(20191004190900),
+(20191004191000);
+
+[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-04 21:45:35.352696"], ["updated_at", "2019-10-04 21:45:35.352696"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-10-04 21:45:35.359525"], ["key", "environment"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "945a6d246d4279f2f9531aea1556a85a71dc1606"], ["created_at", "2019-10-04 21:45:35.366422"], ["updated_at", "2019-10-04 21:45:35.366422"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (42.6ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "General Programming"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.536358"], ["updated_at", "2019-10-04 21:45:35.536358"]]
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.6ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "HTML"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.626925"], ["updated_at", "2019-10-04 21:45:35.626925"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "CSS"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.644140"], ["updated_at", "2019-10-04 21:45:35.644140"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "JavaScript"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.649362"], ["updated_at", "2019-10-04 21:45:35.649362"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "React"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.653956"], ["updated_at", "2019-10-04 21:45:35.653956"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "Git and Github"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.659135"], ["updated_at", "2019-10-04 21:45:35.659135"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "Express.js"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.664355"], ["updated_at", "2019-10-04 21:45:35.664355"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "Node.js"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.669442"], ["updated_at", "2019-10-04 21:45:35.669442"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.3ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "SQL"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.674827"], ["updated_at", "2019-10-04 21:45:35.674827"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Create (0.4ms)[0m  [1m[32mINSERT INTO "decks" ("topic", "is_public", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["topic", "Ruby on Rails"], ["is_public", true], ["created_at", "2019-10-04 21:45:35.679950"], ["updated_at", "2019-10-04 21:45:35.679950"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.4ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCard Create (28.4ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "MVC"], ["answer", "Model (connection to your database) View (what the user sees) Controller (brains/logic of the operation). It's purpose is to delineate a way to organize your code."], ["is_public", true], ["deck_id", 1], ["created_at", "2019-10-04 21:45:35.930090"], ["updated_at", "2019-10-04 21:45:35.930090"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "Explain the difference between a framework and a library"], ["answer", "A library is like a vocabulary and a framework is like a language. Both offer code to help you solve problems but a library allows you to cherry pick the pieces you use whereas a framework comes with rules and conventions to follow in order to use it."], ["is_public", true], ["deck_id", 1], ["created_at", "2019-10-04 21:45:35.965703"], ["updated_at", "2019-10-04 21:45:35.965703"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What is the purpose of semantic HTML5 elements?"], ["answer", "They provide more context for your code and add to the accessibility of a site. Ex: main, header, nav, aside, footer"], ["is_public", true], ["deck_id", 2], ["created_at", "2019-10-04 21:45:35.981524"], ["updated_at", "2019-10-04 21:45:35.981524"]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What is the difference between the head and header tag?"], ["answer", "The head tag contains information related to the title and heading of page's content; it is not displayed on the page. The header tag contains content to be displayed on the page's header."], ["is_public", true], ["deck_id", 2], ["created_at", "2019-10-04 21:45:35.999553"], ["updated_at", "2019-10-04 21:45:35.999553"]]
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.4ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "Explain the difference between visibility: hidden and display: none"], ["answer", "Visibility: hidden hides an image from the user but preserves the space it took up. Display: none removes the element from the layout and does NOT preserve the space."], ["is_public", true], ["deck_id", 3], ["created_at", "2019-10-04 21:45:36.050660"], ["updated_at", "2019-10-04 21:45:36.050660"]]
+  [1m[35m (31.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCard Create (0.6ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What does CSS stand for?"], ["answer", "Cascading Style Sheets"], ["is_public", true], ["deck_id", 3], ["created_at", "2019-10-04 21:45:36.094665"], ["updated_at", "2019-10-04 21:45:36.094665"]]
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCard Create (0.7ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "Explain the difference between == and ===."], ["answer", "Both are comparison operators where == compares just the value and === compares the value and data type. Ex. 1 == '1' returns true but 1 === '1' returns false."], ["is_public", true], ["deck_id", 4], ["created_at", "2019-10-04 21:45:36.145674"], ["updated_at", "2019-10-04 21:45:36.145674"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What is a higher order function?"], ["answer", "A method that calls another function."], ["is_public", true], ["deck_id", 4], ["created_at", "2019-10-04 21:45:36.155142"], ["updated_at", "2019-10-04 21:45:36.155142"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What are hooks?"], ["answer", "Hooks are a React feature that allow you to use state in a functional component."], ["is_public", true], ["deck_id", 5], ["created_at", "2019-10-04 21:45:36.161502"], ["updated_at", "2019-10-04 21:45:36.161502"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "Explain the React lifecycle."], ["answer", "The sequential process a component goes through. There are three stages - Mounting (when a user arrives to the page), Updating (when state changes) and Unmounting (when the user leaves the page)."], ["is_public", true], ["deck_id", 5], ["created_at", "2019-10-04 21:45:36.168192"], ["updated_at", "2019-10-04 21:45:36.168192"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What's the command for creating a new branch and checking it out?"], ["answer", "git checkout -b <branch-name>"], ["is_public", true], ["deck_id", 6], ["created_at", "2019-10-04 21:45:36.174436"], ["updated_at", "2019-10-04 21:45:36.174436"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCard Create (1.8ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "You've created a new local directory. What's the next step to attach it to a remote Github repository?"], ["answer", "Navigate to github, create a new repository (without initializing a README), copy the link provided and type the following into your terminal: git remote add origin <copied link>."], ["is_public", true], ["deck_id", 6], ["created_at", "2019-10-04 21:45:36.181538"], ["updated_at", "2019-10-04 21:45:36.181538"]]
+  [1m[35m (39.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCard Create (4.4ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "Define Express.js"], ["answer", "Express.js is a framework for creating a web server that runs on the node platform."], ["is_public", true], ["deck_id", 7], ["created_at", "2019-10-04 21:45:36.240331"], ["updated_at", "2019-10-04 21:45:36.240331"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "How would you retrieve the body of a user's request in Express?"], ["answer", "req.body"], ["is_public", true], ["deck_id", 7], ["created_at", "2019-10-04 21:45:36.252055"], ["updated_at", "2019-10-04 21:45:36.252055"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What's the command for initializing a package.json file from the terminal?"], ["answer", "npm init"], ["is_public", true], ["deck_id", 8], ["created_at", "2019-10-04 21:45:36.258340"], ["updated_at", "2019-10-04 21:45:36.258340"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "You've just forked and cloned a github repo, and see there's a package.json file. What command do you run to install the necessary dependencies?"], ["answer", "npm i"], ["is_public", true], ["deck_id", 8], ["created_at", "2019-10-04 21:45:36.264770"], ["updated_at", "2019-10-04 21:45:36.264770"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What is PostgreSQL?"], ["answer", "An object-relational database management system (ORM)"], ["is_public", true], ["deck_id", 9], ["created_at", "2019-10-04 21:45:36.271031"], ["updated_at", "2019-10-04 21:45:36.271031"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "How would you add a country name to a table called 'countries' in SQL?"], ["answer", "INSERT INTO countries (name) VALUES ('United States of America')"], ["is_public", true], ["deck_id", 9], ["created_at", "2019-10-04 21:45:36.277667"], ["updated_at", "2019-10-04 21:45:36.277667"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What Ruby method could you use to loop through a string?"], ["answer", ".each_with_char"], ["is_public", true], ["deck_id", 10], ["created_at", "2019-10-04 21:45:36.284081"], ["updated_at", "2019-10-04 21:45:36.284081"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("prompt", "answer", "is_public", "deck_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["prompt", "What's the command for starting a rails server with a PSQL database?"], ["answer", "rails new <app-name> --database=postgresql"], ["is_public", true], ["deck_id", 10], ["created_at", "2019-10-04 21:45:36.292266"], ["updated_at", "2019-10-04 21:45:36.292266"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2019-10-04 17:47:02 -0400
+Started GET "/decks" for ::1 at 2019-10-04 17:47:03 -0400
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (65.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  Rendering /Users/eloisebarrow/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+Completed 200 OK in 279ms (Views: 16.5ms | ActiveRecord: 160.6ms | Allocations: 10064)
+
+
+  Rendered /Users/eloisebarrow/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 413.0ms | Allocations: 5526)
+Completed 200 OK in 705ms (Views: 513.9ms | ActiveRecord: 0.0ms | Allocations: 11815)
+
+
+Started GET "/cards" for ::1 at 2019-10-04 17:47:21 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 12.7ms | ActiveRecord: 8.2ms | Allocations: 8363)
+
+
