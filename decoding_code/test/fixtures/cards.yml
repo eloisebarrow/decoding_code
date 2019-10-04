@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prompt: MyString
+  answer: MyString
+  is_public: false
+  deck: one
+
+two:
+  prompt: MyString
+  answer: MyString
+  is_public: false
+  deck: two
