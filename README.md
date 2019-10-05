@@ -127,6 +127,6 @@ code example tbd
 
 ## Issues and Resolutions
 
-**ERROR**: tbd
+**ERROR**: Trying to prevent a user from adding the same deck to their favorites more than once. Tried adding validation to fave model 'validates :deck && :user, uniqueness: true' but it prevents a user from adding more than one favorite altogether.
 
 **RESOLUTION**: tbd
