@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :user_faves
+  resources :faves
   resources :cards
   resources :decks
   resources :users
