@@ -33,8 +33,8 @@ export default function Footer() {
         <div>
           <h4>About</h4>
           <ul>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Process</a></li>
+            <li><a href="https://github.com/eloisebarrow/decoding_code" target="_blank" rel="noopener noreferrer">Project</a></li>
+            <li><a href="https://medium.com/me/stories/public" target="_blank" rel="noopener noreferrer">Process</a></li>
           </ul>
         </div>
       </nav>
