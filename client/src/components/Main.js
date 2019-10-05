@@ -7,7 +7,7 @@ import NewCardForm from './NewCardForm';
 import UserDecks from './UserDecks';
 import { Route, Switch } from 'react-router-dom';
 
-export default function Main() {
+export default function Main(props) {
   return (
     <div>
       <Switch>
@@ -27,7 +27,7 @@ export default function Main() {
           <SingleDeck />
         )} />
         <Route path="/decks" render={()=>(
-          <AllDecks />
+          <AllDecks decks={props.decks}/>
         )} />
         <Route path="/" render={()=>(
           <Home />
