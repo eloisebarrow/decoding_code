@@ -1,5 +1,6 @@
 import React from 'react';
 import './Browse.css';
+import { Link } from 'react-router-dom';
 
 export default function Browse() {
   return (
@@ -11,6 +12,7 @@ export default function Browse() {
         <div className="example-deck"></div>
         <div className="example-deck"></div>
       </div>
+      <Link to="/decks"><button>See All Decks</button></Link>
     </div>
   )
 }
