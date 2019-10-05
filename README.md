@@ -87,11 +87,15 @@ TBD
 | --- | :---: |  
 |  App | Calls Header, Main, Footer | 
 | Header | Contains logo, topics dropdown, login/sign up buttons (or hi, user, sign out button & link to 'my decks') | 
-| Main | landing page renders Home component, otherwise renders one of the following components: LoginRegisterForm, AllDecks, SingleDeck, SingleCard, NewCardForm, UserDecks |
+| Main | landing page renders Home component, otherwise renders one of the following components: LoginRegisterForm, AllDecks, SingleDeck, NewCardForm, UserDecks |
 | Footer | Renders links to other areas of site plus github repo and copyright |
 | Home | Renders all of the following components: About, GetStarted, Browse, Aside |
+| About | Renders a background image with a short intro and button to get started |
+| GetStarted | Renders addition short intro text and an example flashcard that contains a button to start studying |
+| Browse | Renders a title 'Browse Decks', a few example decks and a button to see all decks |
+| Aside | Renders an image and outro text |
 | LoginRegisterForm | Renders either login or register form |
-| AllDecks | Renders a grid of divs that link to each individual deck |
+| AllDecks | Renders a grid of divs that link to single decks |
 | SingleDeck | Renders the topic title, an ordered list of cards in that deck and the SingleCard component | 
 | SingleCard | Renders either a prompt or response |
 | NewCardForm | Renders a form which generates a new card |
