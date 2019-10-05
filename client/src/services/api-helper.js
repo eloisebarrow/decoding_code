@@ -6,7 +6,7 @@ const api = axios.create({
 export const getDecks = async () => {
   try {
     const resp = await api.get('/decks');
-    console.log(resp.data);
+    return resp.data;
   } catch (e) {
     console.log(e.message)
   }
