@@ -1005,3 +1005,257 @@ SyntaxError (/Users/eloisebarrow/projects/decoding-code/decoding_code/app/models
 app/models/fave.rb:5: syntax error, unexpected ',', expecting end
 app/models/fave.rb:5: syntax error, unexpected ',', expecting end
 app/controllers/faves_controller.rb:18:in `create'
+Started PUT "/faves" for ::1 at 2019-10-05 12:31:07 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/faves"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/faves/4" for ::1 at 2019-10-05 12:32:55 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"fave"=>{"user_id"=>"4", "deck_id"=>"1"}, "id"=>"4", "fafe"=>{"fave"=>{"user_id"=>"4", "deck_id"=>"1"}}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 501)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started DELETE "/faves/1" for ::1 at 2019-10-05 12:33:06 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"fave"=>{"user_id"=>"4", "deck_id"=>"1"}, "id"=>"1", "fafe"=>{"fave"=>{"user_id"=>"4", "deck_id"=>"1"}}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 473)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started DELETE "/faves/1" for ::1 at 2019-10-05 12:33:58 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"id"=>"1", "fafe"=>{"id"=>"1"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 473)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started DELETE "/faves/2" for ::1 at 2019-10-05 12:34:03 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"id"=>"2", "fafe"=>{"id"=>"2"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 473)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started GET "/faves" for ::1 at 2019-10-05 12:34:14 -0400
+Processing by FavesController#index as HTML
+  [1m[36mFave Load (1.3ms)[0m  [1m[34mSELECT "faves".* FROM "faves"[0m
+  ↳ app/controllers/faves_controller.rb:8:in `index'
+Completed 200 OK in 73ms (Views: 9.7ms | ActiveRecord: 24.3ms | Allocations: 6249)
+
+
+Started DELETE "/faves/1" for ::1 at 2019-10-05 12:34:31 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"id"=>"1", "fafe"=>{"id"=>"1"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 472)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started DELETE "/faves/1" for ::1 at 2019-10-05 12:34:37 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"id"=>"1", "fafe"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 472)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started GET "/faves" for ::1 at 2019-10-05 12:34:44 -0400
+Processing by FavesController#index as HTML
+  [1m[36mFave Load (0.9ms)[0m  [1m[34mSELECT "faves".* FROM "faves"[0m
+  ↳ app/controllers/faves_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.9ms | Allocations: 1179)
+
+
+Started DELETE "/faves/1" for ::1 at 2019-10-05 12:35:21 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"fave"=>{"id"=>"1"}, "id"=>"1", "fafe"=>{"fave"=>{"id"=>"1"}}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 472)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started GET "/faves" for ::1 at 2019-10-05 12:35:36 -0400
+Processing by FavesController#index as HTML
+  [1m[36mFave Load (0.3ms)[0m  [1m[34mSELECT "faves".* FROM "faves"[0m
+  ↳ app/controllers/faves_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1179)
+
+
+Started GET "/faves" for ::1 at 2019-10-05 12:35:37 -0400
+Processing by FavesController#index as HTML
+  [1m[36mFave Load (1.3ms)[0m  [1m[34mSELECT "faves".* FROM "faves"[0m
+  ↳ app/controllers/faves_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 1.3ms | Allocations: 1180)
+
+
+Started GET "/faves/1" for ::1 at 2019-10-05 12:36:07 -0400
+Processing by FavesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 66)
+
+
+Started GET "/faves/" for ::1 at 2019-10-05 12:36:12 -0400
+Processing by FavesController#index as HTML
+  [1m[36mFave Load (0.5ms)[0m  [1m[34mSELECT "faves".* FROM "faves"[0m
+  ↳ app/controllers/faves_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 1180)
+
+
+Started DELETE "/faves" for ::1 at 2019-10-05 12:36:26 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/faves"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/faves/2" for ::1 at 2019-10-05 12:36:31 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"fave"=>{"id"=>"1"}, "id"=>"2", "fafe"=>{"fave"=>{"id"=>"1"}}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 474)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started GET "/faves/" for ::1 at 2019-10-05 12:36:36 -0400
+Processing by FavesController#index as HTML
+  [1m[36mFave Load (0.4ms)[0m  [1m[34mSELECT "faves".* FROM "faves"[0m
+  ↳ app/controllers/faves_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 1179)
+
+
+Started DELETE "/faves/1" for ::1 at 2019-10-05 12:37:19 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"fave"=>{"id"=>"1"}, "id"=>"1", "fafe"=>{"fave"=>{"id"=>"1"}}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 472)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started DELETE "/faves/1" for ::1 at 2019-10-05 12:37:37 -0400
+Processing by FavesController#destroy as */*
+  Parameters: {"id"=>"1", "fafe"=>{"id"=>"1"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 472)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/faves_controller.rb:29:in `destroy'
+Started GET "/faves/1" for ::1 at 2019-10-05 12:38:34 -0400
+Processing by FavesController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 67)
+
+
+Started GET "/user_faves/1" for ::1 at 2019-10-05 12:39:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/user_faves/1"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/faves/1" for ::1 at 2019-10-05 12:39:23 -0400
+Processing by FavesController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 67)
+
+
+Started GET "/faves/1" for ::1 at 2019-10-05 12:39:39 -0400
+Processing by FavesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 65)
+
+
+Started GET "/faves" for ::1 at 2019-10-05 12:39:43 -0400
+Processing by FavesController#index as HTML
+  [1m[36mFave Load (0.8ms)[0m  [1m[34mSELECT "faves".* FROM "faves"[0m
+  ↳ app/controllers/faves_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.8ms | Allocations: 1179)
+
+
