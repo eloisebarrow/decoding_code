@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './Browse.css';
 
 export default function Browse() {
   return (
     <div>
-      <h1>Browse</h1>
+      <h2>Browse Decks</h2>
+      <div className="browse-container">
+        <div className="example-deck"></div>
+        <div className="example-deck"></div>
+        <div className="example-deck"></div>
+        <div className="example-deck"></div>
+      </div>
     </div>
   )
 }

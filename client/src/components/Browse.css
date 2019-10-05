@@ -1,0 +1,10 @@
+.browse-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.example-deck {
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+}
