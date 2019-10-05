@@ -12,10 +12,20 @@ export default function Main(props) {
     <div>
       <Switch>
         <Route path="/login" render={()=>(
-          <LoginRegisterForm />
+          <LoginRegisterForm 
+            title={'login'}
+            loginFormData={props.loginFormData}
+            handleLoginFormChange={props.handleLoginFormChange}
+            handleLogin={props.handleLogin}
+          />
         )} />
         <Route path="/register" render={()=>(
-          <LoginRegisterForm />
+          <LoginRegisterForm 
+            title={'register'}
+            loginFormData={props.loginFormData}
+            handleLoginFormChange={props.handleLoginFormChange}
+            handleRegister={props.handleRegister}  
+          />
         )} />
         <Route path="/new-card" render={()=>(
           <NewCardForm />
