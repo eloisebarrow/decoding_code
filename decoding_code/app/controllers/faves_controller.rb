@@ -24,15 +24,6 @@ class FavesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /faves/1
-  def update
-    if @fave.update(fave_params)
-      render json: @fave
-    else
-      render json: @fave.errors, status: :unprocessable_entity
-    end
-  end
-
   # DELETE /faves/1
   def destroy
     @fave.destroy
