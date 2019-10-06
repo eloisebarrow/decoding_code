@@ -3,11 +3,14 @@ import './App.css';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import { getDecks } from './services/api-helper.js';
+import { 
+  getDecks
+ } from './services/decks-api-helper.js';
 
 class App extends React.Component {
   state = {
     decks: [],
+    oneDeck: [],
     currentUser: null,
     loginFormData: {
       firstName: '',
@@ -16,6 +19,8 @@ class App extends React.Component {
       password: ''
     }
   }
+
+  /********************** FORM FUNCTIONS *******************************/
 
   handleLogin = async () => {
 
@@ -32,11 +37,17 @@ class App extends React.Component {
     }))
   }
 
-  componentDidMount = async () => {
-    const allDecks = await getDecks();
+  /********************** API CALLS *****************************/
+  allDecks = async () => {
+    const decks = await getDecks();
     this.setState({
-      decks: allDecks
+      decks
     })
+  }
+
+  componentDidMount = () => {
+    this.allDecks();
+    
   }
 
   render() {
