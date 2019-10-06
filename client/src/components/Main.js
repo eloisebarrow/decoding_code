@@ -34,8 +34,8 @@ export default function Main(props) {
         <Route path="/my-decks" render={()=>(
           <UserDecks />
         )} />
-        <Route exact path="/decks/deck-name" render={()=>(
-          <SingleDeck />
+        <Route exact path="/decks/:id" render={()=>(
+          <SingleDeck cards={props.cards} />
         )} />
         <Route path="/decks" render={()=>(
           <AllDecks decks={props.decks}/>

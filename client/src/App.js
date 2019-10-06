@@ -6,11 +6,14 @@ import Footer from './components/Footer';
 import { 
   getDecks
  } from './services/decks-api-helper.js';
+ import {
+   getCards
+ } from './services/cards-api-helper.js';
 
 class App extends React.Component {
   state = {
     decks: [],
-    oneDeck: [],
+    cards: [],
     currentUser: null,
     loginFormData: {
       firstName: '',
@@ -45,17 +48,26 @@ class App extends React.Component {
     })
   }
 
+  allCards = async () => {
+    const cards = await getCards();
+    this.setState({
+      cards
+    })
+  }
+
   componentDidMount = () => {
     this.allDecks();
-    
+    this.allCards();
   }
 
   render() {
+    console.log('this is all cards from App', this.state.cards)
     return (
       <div className="App">
         <Header />
         <Main 
           decks={this.state.decks}
+          cards={this.state.cards}
           loginFormData={this.state.loginFormData}
           handleLoginFormChange={this.handleLoginFormChange}
           handleLogin={this.handleLogin}
