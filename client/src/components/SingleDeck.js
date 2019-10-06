@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import SingleCard from './SingleCard';
 
 export default function SingleDeck(props) {
-
+  console.log('this is cards by deck', props.cardsByDeck)
   return (
     <div className="single-deck-container">
       <h2>Example: JavaScript</h2>
