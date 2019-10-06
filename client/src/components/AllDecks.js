@@ -9,7 +9,7 @@ export default function AllDecks(props) {
       <div className="decks-container">
         {props.decks.map( deck => {
           return <div key={deck.id}>
-            <Link to={`decks/${deck.id}`} className="deck-div">
+            <Link to={`decks/${deck.id}/cards`} className="deck-div">
               {deck.topic}
             </Link>
           </div>
