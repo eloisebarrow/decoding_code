@@ -1,4 +1,5 @@
 import React from 'react';
+import './Main.css';
 import Home from './Home';
 import LoginRegisterForm from './LoginRegisterForm';
 import AllDecks from './AllDecks';
@@ -9,7 +10,7 @@ import { Route, Switch } from 'react-router-dom';
 
 export default function Main(props) {
   return (
-    <div>
+    <div className="main-container">
       <Switch>
         <Route path="/login" render={()=>(
           <LoginRegisterForm 

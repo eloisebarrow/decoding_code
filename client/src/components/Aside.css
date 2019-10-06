@@ -1,0 +1,17 @@
+.aside-container {
+  background-image: url('./../images/development.jpg');
+  background-size: cover;
+  height: 50vh;
+  padding-bottom: 11%;
+  position: relative;
+}
+
+.aside-container h2 {
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 0;
+}
+
+.aside-container a {
+  color: rgb(242, 131, 92);
+}
