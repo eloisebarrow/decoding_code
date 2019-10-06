@@ -8,6 +8,14 @@ export const getDecks = async () => {
     const resp = await api.get('/decks');
     return resp.data;
   } catch (e) {
-    console.log(e.message)
+    return e.message
+  }
+};
+
+export const getOneDeck = async (deckId) => {
+  try {
+    const resp = await api.get(`/decks/${deckId}`)
+  } catch (e) {
+    return e.messsage
   }
 };
