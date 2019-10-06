@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <div className="header-container">
-      <Link to="/"><h1>De/Coding Code</h1></Link>
+      <Link to="/" className="title"><h1>De/Coding Code</h1></Link>
       <nav className="header-nav">
         <ul>
           <li> Topics

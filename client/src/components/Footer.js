@@ -4,7 +4,7 @@ import './Footer.css';
 
 export default function Footer() {
   return (
-    <div>
+    <div className="footer-container">
       <nav className="footer-nav">
         <div>
           <h4>Topics</h4>

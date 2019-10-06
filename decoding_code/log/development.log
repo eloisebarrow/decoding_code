@@ -1704,3 +1704,144 @@ Processing by AuthenticationController#login as */*
 Completed 200 OK in 308ms (Views: 0.6ms | ActiveRecord: 3.5ms | Allocations: 7342)
 
 
+Started GET "/decks" for ::1 at 2019-10-05 22:26:16 -0400
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (3.7ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 145ms (Views: 8.8ms | ActiveRecord: 85.1ms | Allocations: 8235)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:26:46 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (31.9ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 3.7ms | ActiveRecord: 31.9ms | Allocations: 1970)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:28:44 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (0.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms | Allocations: 1970)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:28:47 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (5.9ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 5.9ms | Allocations: 1970)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:29:16 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (2.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 2.2ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:30:26 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (5.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 5.8ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:33:14 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (90.7ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 95ms (Views: 3.9ms | ActiveRecord: 90.7ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:37:18 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (41.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 73ms (Views: 28.5ms | ActiveRecord: 41.5ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:44:16 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (3.9ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 11.5ms | ActiveRecord: 3.9ms | Allocations: 2043)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:47:13 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (34.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 6.4ms | ActiveRecord: 34.6ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:54:45 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (42.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 23.6ms | ActiveRecord: 42.5ms | Allocations: 2030)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:55:01 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (1.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.1ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 22:56:56 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (78.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 97ms (Views: 17.8ms | ActiveRecord: 78.8ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 23:14:01 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (45.4ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 87ms (Views: 38.3ms | ActiveRecord: 45.4ms | Allocations: 2030)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 23:14:05 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (0.4ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.4ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 23:25:26 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (205.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 776ms (Views: 566.7ms | ActiveRecord: 205.3ms | Allocations: 2058)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 23:31:00 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (349.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 377ms (Views: 24.2ms | ActiveRecord: 349.2ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 23:36:29 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (120.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 161ms (Views: 37.7ms | ActiveRecord: 120.1ms | Allocations: 2033)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 23:41:49 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (1.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 45ms (Views: 34.2ms | ActiveRecord: 1.6ms | Allocations: 1953)
+
+
+Started GET "/decks" for ::1 at 2019-10-05 23:42:05 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (672.9ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 687ms (Views: 13.6ms | ActiveRecord: 672.9ms | Allocations: 1953)
+
+
