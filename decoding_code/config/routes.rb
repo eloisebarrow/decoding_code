@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   post '/auth/login', to: 'authentication#login'
   post '/auth/verify', to: 'authentication#verify'
+
+  get '/decks/:id/cards', to: 'decks#card_by_deck'
   
   resources :faves
   resources :cards
