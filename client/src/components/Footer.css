@@ -17,8 +17,13 @@
 
 .footer-nav li {
   list-style: none;
+  line-height: 1.6rem;
 }
 
 .footer-nav a {
   color: #000000;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
 }
