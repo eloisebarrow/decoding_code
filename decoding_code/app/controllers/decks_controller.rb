@@ -38,6 +38,12 @@ class DecksController < ApplicationController
     @deck.destroy
   end
 
+  # GET /decks/1/cards
+  def card_by_deck
+    @cards = Card.where("deck_id = #{params[:id]}")
+    render json: @cards
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_deck

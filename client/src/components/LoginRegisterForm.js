@@ -4,7 +4,7 @@ import './LoginRegisterForm.css';
 export default function LoginRegisterForm(props) {
   return (
     <>
-      <h2>{props.title == 'login' ? "Login" : "Register"}</h2>
+      <h2>{props.title === 'login' ? "Login" : "Register"}</h2>
       <form className="login-form"
         onSubmit={(e) => {
         e.preventDefault()
@@ -14,14 +14,27 @@ export default function LoginRegisterForm(props) {
           props.handleLogin();
         }
       }}>
-        {/* {props.title == 'register' ? 
-        <label htmlFor="firstName">First Name: </label>
-        <input type="text" name="firstName" placeholder="Eloise"></input>
+        {
+          props.title === 'register' && (
+            <> 
+              <label htmlFor="first_name">First Name: </label>
+              <input 
+                onChange={(e) => props.handleLoginFormChange(e)}
+                value={props.loginFormData.first_name}
+                type="text" 
+                name="first_name" 
+                placeholder="Eloise"></input>
 
-        <label htmlFor="lastName">Last Name: </label>
-        <input type="text" name="lastName" placeholder="Barrow"></input>
-        : nil} */}
-
+              <label htmlFor="last_name">Last Name: </label>
+              <input 
+                onChange={(e) => props.handleLoginFormChange(e)}
+                value={props.loginFormData.last_name}
+                type="text" 
+                name="last_name" 
+                placeholder="Barrow"></input>
+            </>
+          )
+        }
         <label htmlFor="email">Email: </label>
         <input 
           onChange={(e) => props.handleLoginFormChange(e)} 

@@ -4,40 +4,59 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import { 
-  getDecks
- } from './services/decks-api-helper.js';
- import {
-   getCards
- } from './services/cards-api-helper.js';
+  getDecks,
+  getCards,
+  getCardsByDeck,
+  loginUser,
+  registerUser
+ } from './services/api-helper.js';
 
 class App extends React.Component {
   state = {
     decks: [],
     cards: [],
+    cardsByDeck: [],
     currentUser: null,
     loginFormData: {
-      firstName: '',
-      lastName: '',
+      first_name: '',
+      last_name: '',
       email: '',
-      password: ''
-    }
+      password: '',
+    },
   }
 
   /********************** FORM FUNCTIONS *******************************/
-
-  handleLogin = async () => {
-
-  }
 
   handleLoginFormChange = (e) => {
     const { name, value } = e.target;
     console.log(name, value)
     this.setState( prevState => ({
-      ...prevState.loginFormData,
       loginFormData: {
+        ...prevState.loginFormData,
         [name]: value
       }
     }))
+  }
+
+  handleLogin = async () => {
+    const currentUser = await loginUser(this.state.loginFormData)
+    this.setState({
+      currentUser
+    })
+  }
+
+  handleRegister = async () => {
+    const currentUser = await registerUser(this.state.loginFormData)
+    this.setState({
+      currentUser
+    })
+  }
+
+  handleLogout = () => {
+    this.setState({
+      currentUser: null
+    })
+    localStorage.removeItem('authToken');
   }
 
   /********************** API CALLS *****************************/
@@ -55,19 +74,27 @@ class App extends React.Component {
     })
   }
 
+  allCardsByDeck = async () => {
+    const cards = await getCardsByDeck()
+    this.setState({
+      cardsByDeck: cards
+    })
+  }
+
   componentDidMount = () => {
     this.allDecks();
     this.allCards();
+    this.allCardsByDeck();
   }
 
   render() {
-    console.log('this is all cards from App', this.state.cards)
     return (
       <div className="App">
-        <Header />
+        <Header currentUser={this.state.currentUser} />
         <Main 
           decks={this.state.decks}
           cards={this.state.cards}
+          cardsByDeck={this.state.cardsByDeck}
           loginFormData={this.state.loginFormData}
           handleLoginFormChange={this.handleLoginFormChange}
           handleLogin={this.handleLogin}

@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header(props) {
 
   return (
     <div className="header-container">
@@ -22,8 +22,15 @@ export default function Header() {
             <Link to="#"><li>Git and Github</li></Link>
           </ul>
         </Link>
-        <Link to="/login">Login</Link>
-        <Link to="/register">Sign Up</Link>
+        { props.currentUser ? 
+          <>
+          <p>Hi, {props.currentUser.first_name}</p>
+          </> : 
+          <>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Sign Up</Link>
+          </>
+        }
       </nav>
 
 

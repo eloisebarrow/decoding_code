@@ -130,3 +130,7 @@ code example tbd
 **ERROR**: Trying to prevent a user from adding the same deck to their favorites more than once. Tried adding validation to fave model 'validates :deck && :user, uniqueness: true' but it prevents a user from adding more than one favorite altogether.
 
 **RESOLUTION**: tbd
+
+**ERROR**: Can't register a user through front end but can through Insomnia. Getting error 422 'unprocessable entity'.
+
+**RESOLUTION**: tbd
