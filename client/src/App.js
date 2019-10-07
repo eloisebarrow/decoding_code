@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import { 
   getDecks,
   getCards,
+  createCard,
   loginUser,
   registerUser,
   verifyUser
@@ -94,6 +95,11 @@ class App extends React.Component {
       currentUser: null
     })
     localStorage.removeItem('authToken');
+  }
+
+  handleNewCard = async () => {
+    const newCard = await createCard(newCardFormData);
+
   }
 
   /********************** API FUNCTIONS *****************************/

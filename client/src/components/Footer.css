@@ -1,9 +1,6 @@
 .footer-container {
-  /* flex: 1;
-  position: absolute;
-  bottom: 0;
-  width: 100%; */
   background-color: #d1eecc;
+  margin-top: 5%;
 }
 
 .footer-nav {

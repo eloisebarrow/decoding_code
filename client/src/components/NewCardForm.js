@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './NewCardForm.css';
 
 export default function NewCardForm(props) {
   return (
-    <div>
+    <div className="new-card-form-container">
       <h1>Make a new card!</h1>
-      <form>
+      <form 
+        className="new-card-form" 
+        onSubmit={(e)=>{
+        e.preventDefault();
+        }}
+      >
         <select name="decks">
           {
             props.decks.map( deck => {
@@ -19,7 +25,8 @@ export default function NewCardForm(props) {
         <input></input>
 
         <label>Response: </label>
-        <input></input>
+        <textarea rows="7" cols="55"></textarea>
+
         <button>Submit</button>
       </form>
     </div>

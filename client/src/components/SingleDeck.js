@@ -36,6 +36,7 @@ export default function SingleDeck(props) {
           <h4>Prompts</h4>
           <ol>
             {prompts}
+            <Link to="/new-card"><li>Create your own!</li></Link>
           </ol>
         </div>
 

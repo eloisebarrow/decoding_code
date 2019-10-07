@@ -25,7 +25,8 @@ export const getCards = async () => {
 
 export const createCard = async (newCardData) => {
   try {
-    const newCard = await api.post('/cards', { card: newCardData })
+    const resp = await api.post('/cards', { card: newCardData })
+    return resp.data;
   } catch (e) {
     return e.message
   }
