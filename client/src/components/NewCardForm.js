@@ -11,7 +11,8 @@ export default function NewCardForm(props) {
               return (
                 <option key={deck.id}>{deck.topic}</option>
               )
-          }) }
+            }) 
+          }
         </select>
         
         <label>Prompt: </label>
@@ -19,6 +20,7 @@ export default function NewCardForm(props) {
 
         <label>Response: </label>
         <input></input>
+        <button>Submit</button>
       </form>
     </div>
   )

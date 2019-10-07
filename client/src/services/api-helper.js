@@ -31,8 +31,6 @@ export const createCard = async (newCardData) => {
   }
 }
 
-
-
 /************************* USER API CALLS ***********************/
 
 export const loginUser = async (loginData) => {
