@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserFavesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @user_fafe = user_faves(:one)
+    @user_fave = user_faves(:one)
   end
 
   test "should get index" do
@@ -10,27 +10,27 @@ class UserFavesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create user_fafe" do
-    assert_difference('UserFafe.count') do
-      post user_faves_url, params: { user_fafe: { deck_id: @user_fafe.deck_id, user_id: @user_fafe.user_id } }, as: :json
+  test "should create user_fave" do
+    assert_difference('UserFave.count') do
+      post user_faves_url, params: { user_fave: { deck_id: @user_fave.deck_id, user_id: @user_fave.user_id } }, as: :json
     end
 
     assert_response 201
   end
 
-  test "should show user_fafe" do
-    get user_fafe_url(@user_fafe), as: :json
+  test "should show user_fave" do
+    get user_fave_url(@user_fave), as: :json
     assert_response :success
   end
 
-  test "should update user_fafe" do
-    patch user_fafe_url(@user_fafe), params: { user_fafe: { deck_id: @user_fafe.deck_id, user_id: @user_fafe.user_id } }, as: :json
+  test "should update user_fave" do
+    patch user_fave_url(@user_fave), params: { user_fave: { deck_id: @user_fave.deck_id, user_id: @user_fave.user_id } }, as: :json
     assert_response 200
   end
 
-  test "should destroy user_fafe" do
-    assert_difference('UserFafe.count', -1) do
-      delete user_fafe_url(@user_fafe), as: :json
+  test "should destroy user_fave" do
+    assert_difference('UserFave.count', -1) do
+      delete user_fave_url(@user_fave), as: :json
     end
 
     assert_response 204

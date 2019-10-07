@@ -1,21 +1,20 @@
 class FavesController < ApplicationController
-  # before_action :set_fave, only: [:show, :update, :destroy]
+  before_action :set_deck, except: [:index]
+  before_action :authorize_request
 
   # GET /faves
   def index
-    @faves = Fave.all
+    @faves = @current_user.faves
 
     render json: @faves
   end
 
-  # GET /faves/1
-  def show
-    render json: @fave
-  end
-
   # POST /faves
   def create
-    @fave = Fave.new(fave_params)
+    @fave = Fave.new({
+      user: @current_user,
+      deck: @deck
+    })
 
     if @fave.save
       render json: @fave, status: :created, location: @fave
@@ -31,8 +30,8 @@ class FavesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def fave
-      @fave = Fave.find(params[:id])
+    def set_deck
+      @deck = Deck.find(params[:deck_id])
     end
 
     # Only allow a trusted parameter "white list" through.
