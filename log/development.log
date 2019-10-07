@@ -1639,3 +1639,1375 @@ Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.9ms | Allocations: 3772)
 Completed 200 OK in 47ms (Views: 0.6ms | ActiveRecord: 35.5ms | Allocations: 7404)
 
 
+Started GET "/cards" for ::1 at 2019-10-07 18:28:34 -0400
+Started GET "/decks" for ::1 at 2019-10-07 18:28:34 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 18:28:34 -0400
+Processing by AuthenticationController#verify as HTML
+Processing by CardsController#index as HTML
+Processing by DecksController#index as HTML
+  [1m[36mCard Load (6.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 13.9ms | ActiveRecord: 6.9ms | Allocations: 4185)
+
+
+  [1m[36mDeck Load (13.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (26.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (12.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (37.9ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (2.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (5.7ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 99ms (Views: 43.1ms | ActiveRecord: 54.8ms | Allocations: 19191)
+
+
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 129ms (Views: 0.7ms | ActiveRecord: 82.2ms | Allocations: 23855)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 18:31:26 -0400
+Started GET "/cards" for ::1 at 2019-10-07 18:31:26 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 18:31:26 -0400
+Processing by CardsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCard Load (13.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 9.6ms | ActiveRecord: 13.1ms | Allocations: 4017)
+
+
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (2.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 36.0ms | ActiveRecord: 6.9ms | Allocations: 14028)
+
+
+  [1m[36mUser Load (99.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (187.1ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (2.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 312ms (Views: 1.0ms | ActiveRecord: 290.3ms | Allocations: 21789)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 18:32:24 -0400
+Started GET "/cards" for ::1 at 2019-10-07 18:32:24 -0400
+Processing by CardsController#index as HTML
+Processing by DecksController#index as HTML
+  [1m[36mCard Load (33.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 8.6ms | ActiveRecord: 33.5ms | Allocations: 3939)
+
+
+  [1m[36mDeck Load (85.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (6.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (5.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 18:32:24 -0400
+  [1m[36mCard Load (3.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (6.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (0.4ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (3.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (1.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 17ms (Views: 1.6ms | ActiveRecord: 3.7ms | Allocations: 5083)
+
+
+  [1m[36mCard Load (118.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (24.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 298ms (Views: 40.5ms | ActiveRecord: 257.1ms | Allocations: 22110)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 18:35:32 -0400
+Started GET "/cards" for ::1 at 2019-10-07 18:35:32 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+  [1m[36mDeck Load (6.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 18:35:32 -0400
+  [1m[36mCard Load (11.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCard Load (36.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+  [1m[36mCard Load (4.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+Completed 200 OK in 48ms (Views: 9.9ms | ActiveRecord: 36.3ms | Allocations: 6822)
+
+
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  [1m[36mUser Load (322.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (1.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 569ms (Views: 536.6ms | ActiveRecord: 28.0ms | Allocations: 19419)
+
+
+  [1m[36mFave Load (43.4ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (0.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 574ms (Views: 1.0ms | ActiveRecord: 366.8ms | Allocations: 19313)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:14:34 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:14:34 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:14:34 -0400
+Processing by CardsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Processing by DecksController#index as HTML
+  [1m[36mCard Load (5.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 17.4ms | ActiveRecord: 5.5ms | Allocations: 4202)
+
+
+  [1m[36mDeck Load (13.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (3.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 76ms (Views: 47.8ms | ActiveRecord: 27.6ms | Allocations: 18480)
+
+
+  [1m[36mFave Load (83.7ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (1.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 131ms (Views: 1.2ms | ActiveRecord: 96.9ms | Allocations: 21890)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:14:56 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:14:56 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:14:56 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mDeck Load (55.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (46.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 8.1ms | ActiveRecord: 46.4ms | Allocations: 4945)
+
+
+  [1m[36mCard Load (2.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (7.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (14.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (25.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (16.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (36.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (18.3ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (5.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (10.7ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 169ms (Views: 2.0ms | ActiveRecord: 88.8ms | Allocations: 15921)
+
+
+  [1m[36mCard Load (15.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 209ms (Views: 53.1ms | ActiveRecord: 156.1ms | Allocations: 22221)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:16:04 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:16:04 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+  [1m[36mDeck Load (5.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+  [1m[36mCard Load (2.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 4.0ms | Allocations: 4455)
+
+
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (5.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 39.6ms | ActiveRecord: 16.1ms | Allocations: 18030)
+
+
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:16:04 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (0.5ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (1.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 33ms (Views: 0.9ms | ActiveRecord: 18.3ms | Allocations: 3611)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:16:24 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (1.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+Started GET "/cards" for ::1 at 2019-10-07 19:16:24 -0400
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (3.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 3.2ms | Allocations: 4585)
+
+
+  [1m[36mCard Load (10.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (111.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (22.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (21.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (3.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 234ms (Views: 57.0ms | ActiveRecord: 174.7ms | Allocations: 18525)
+
+
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:16:24 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (1.2ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (0.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 85ms (Views: 3.3ms | ActiveRecord: 3.2ms | Allocations: 3604)
+
+
+Started GET "/cards" for ::1 at 2019-10-07 19:17:01 -0400
+Started GET "/decks" for ::1 at 2019-10-07 19:17:01 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:17:01 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (4.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 4.3ms | Allocations: 3515)
+
+
+Processing by DecksController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mDeck Load (50.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (6.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (1.7ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/models/user.rb:17:in `map'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (2.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 84ms (Views: 0.7ms | ActiveRecord: 5.3ms | Allocations: 8965)
+
+
+  [1m[36mCard Load (2.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (5.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (12.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 160ms (Views: 71.4ms | ActiveRecord: 88.0ms | Allocations: 18190)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:17:16 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:17:16 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:17:16 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (8.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 8.5ms | Allocations: 3506)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mDeck Load (19.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (2.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (3.4ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (2.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (10.6ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 32ms (Views: 0.8ms | ActiveRecord: 18.5ms | Allocations: 12268)
+
+
+  [1m[36mCard Load (3.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (6.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 67ms (Views: 31.4ms | ActiveRecord: 35.6ms | Allocations: 22187)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:18:16 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:18:16 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (11.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  [1m[36mCard Load (9.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 9.5ms | ActiveRecord: 9.3ms | Allocations: 4610)
+
+
+  [1m[36mCard Load (10.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (14.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:18:16 -0400
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 71ms (Views: 28.3ms | ActiveRecord: 42.3ms | Allocations: 18373)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (0.4ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 1.9ms | Allocations: 3599)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:19:06 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:19:06 -0400
+Processing by CardsController#index as HTML
+Processing by DecksController#index as HTML
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.8ms | Allocations: 3612)
+
+
+  [1m[36mDeck Load (5.9ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (8.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (11.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (9.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (3.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:19:06 -0400
+  [1m[36mCard Load (72.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCard Load (23.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 171ms (Views: 32.1ms | ActiveRecord: 138.7ms | Allocations: 18437)
+
+
+  [1m[36mUser Load (37.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (4.9ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (0.4ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 56ms (Views: 0.7ms | ActiveRecord: 43.1ms | Allocations: 6828)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:20:44 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:20:44 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 2.1ms | Allocations: 3506)
+
+
+  [1m[36mDeck Load (12.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (16.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (14.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:20:44 -0400
+  [1m[36mCard Load (1.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCard Load (1.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (2.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (3.8ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (2.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 105ms (Views: 50.9ms | ActiveRecord: 53.6ms | Allocations: 20184)
+
+
+  [1m[36mDeck Load (5.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 26ms (Views: 1.1ms | ActiveRecord: 12.2ms | Allocations: 10130)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:20:50 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:20:50 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:20:50 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mDeck Load (11.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  [1m[36mCard Load (9.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 12.1ms | ActiveRecord: 9.6ms | Allocations: 5589)
+
+
+  [1m[36mCard Load (8.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  [1m[36mFave Load (7.4ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (24.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (26.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCard Load (2.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 58ms (Views: 0.8ms | ActiveRecord: 42.0ms | Allocations: 11089)
+
+
+  [1m[36mCard Load (3.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (71.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (20.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (18.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 201ms (Views: 36.3ms | ActiveRecord: 163.9ms | Allocations: 22175)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:22:39 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:22:39 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (24.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (42.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:22:39 -0400
+  [1m[36mCard Load (31.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mCard Load (1.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 7.8ms | ActiveRecord: 31.5ms | Allocations: 5673)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCard Load (4.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (2.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  [1m[36mFave Load (0.5ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (4.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCard Load (5.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 27ms (Views: 0.8ms | ActiveRecord: 6.8ms | Allocations: 6912)
+
+
+  [1m[36mCard Load (10.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (20.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (11.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 177ms (Views: 50.6ms | ActiveRecord: 126.3ms | Allocations: 22527)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:23:27 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:23:27 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:23:27 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mDeck Load (9.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (10.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 10.4ms | Allocations: 5368)
+
+
+  [1m[36mCard Load (12.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (13.7ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (14.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  [1m[36mDeck Load (1.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 2.5ms | ActiveRecord: 19.6ms | Allocations: 10365)
+
+
+  [1m[36mCard Load (44.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (98.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (21.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (9.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (7.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (28.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 327ms (Views: 72.7ms | ActiveRecord: 254.0ms | Allocations: 22109)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:27:28 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:27:28 -0400
+Processing by DecksController#index as HTML
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:27:28 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms | Allocations: 3506)
+
+
+  [1m[36mDeck Load (67.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCard Load (11.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (29.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (44.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (5.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (20.4ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (34.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (33.9ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 114ms (Views: 0.8ms | ActiveRecord: 99.1ms | Allocations: 8017)
+
+
+  [1m[36mCard Load (29.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (7.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 234ms (Views: 44.5ms | ActiveRecord: 189.4ms | Allocations: 22527)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:28:21 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:28:21 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+  [1m[36mDeck Load (21.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  [1m[36mCard Load (21.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 6.6ms | ActiveRecord: 21.0ms | Allocations: 4119)
+
+
+  [1m[36mCard Load (27.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (18.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (11.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:28:21 -0400
+  [1m[36mCard Load (2.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCard Load (27.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 161ms (Views: 39.7ms | ActiveRecord: 121.5ms | Allocations: 18558)
+
+
+  [1m[36mUser Load (32.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (1.8ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (1.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 48ms (Views: 0.9ms | ActiveRecord: 35.7ms | Allocations: 6832)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:29:56 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:29:56 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+  [1m[36mDeck Load (2.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.5ms | Allocations: 4442)
+
+
+  [1m[36mCard Load (13.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (3.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 70ms (Views: 37.7ms | ActiveRecord: 31.5ms | Allocations: 18030)
+
+
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:29:57 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (0.7ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (0.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 3.2ms | Allocations: 3612)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:31:13 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:31:13 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:31:14 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (2.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 2.8ms | Allocations: 3506)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mDeck Load (62.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (2.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (11.4ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (6.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (2.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCard Load (1.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 42ms (Views: 1.1ms | ActiveRecord: 28.6ms | Allocations: 7848)
+
+
+  [1m[36mCard Load (1.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (39.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (6.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 524ms (Views: 400.7ms | ActiveRecord: 122.4ms | Allocations: 22213)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:31:19 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:31:19 -0400
+Processing by CardsController#index as HTML
+Processing by DecksController#index as HTML
+  [1m[36mCard Load (21.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 8.2ms | ActiveRecord: 21.8ms | Allocations: 3939)
+
+
+  [1m[36mDeck Load (28.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (62.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (4.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:31:20 -0400
+  [1m[36mCard Load (182.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (14.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCard Load (31.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (33.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (17.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (24.8ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (13.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (72.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 145ms (Views: 1.3ms | ActiveRecord: 130.7ms | Allocations: 7261)
+
+
+  [1m[36mCard Load (77.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 474ms (Views: 40.4ms | ActiveRecord: 432.7ms | Allocations: 22110)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:32:13 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:32:13 -0400
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (64.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:32:13 -0400
+  [1m[36mCard Load (78.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (9.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.6ms | Allocations: 3509)
+
+
+  [1m[36mCard Load (34.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mCard Load (123.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  [1m[36mUser Load (123.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (7.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (13.0ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (2.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  [1m[36mDeck Load (1.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 155ms (Views: 1.3ms | ActiveRecord: 137.3ms | Allocations: 6959)
+
+
+  [1m[36mCard Load (34.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 403ms (Views: 43.7ms | ActiveRecord: 359.1ms | Allocations: 22617)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:32:31 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:32:31 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.2ms | Allocations: 3506)
+
+
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (5.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:32:31 -0400
+  [1m[36mCard Load (40.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (3.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+Processing by AuthenticationController#verify as HTML
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (3.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (3.2ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (4.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (12.2ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 18.3ms | Allocations: 6190)
+
+
+  [1m[36mCard Load (25.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 118ms (Views: 33.7ms | ActiveRecord: 83.9ms | Allocations: 18474)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:32:56 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:32:56 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+  [1m[36mDeck Load (1.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (3.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 3.4ms | Allocations: 4442)
+
+
+  [1m[36mCard Load (7.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (7.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (63.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (41.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (5.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 164ms (Views: 32.4ms | ActiveRecord: 131.5ms | Allocations: 17703)
+
+
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:32:56 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (0.4ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (6.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 18ms (Views: 1.1ms | ActiveRecord: 7.8ms | Allocations: 3611)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:33:23 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:33:23 -0400
+Processing by DecksController#index as HTML
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:33:23 -0400
+Processing by CardsController#index as HTML
+  [1m[36mCard Load (1.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+  [1m[36mDeck Load (243.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.2ms | Allocations: 3523)
+
+
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (71.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (5.1ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mCard Load (82.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (3.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  [1m[36mDeck Load (6.8ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 96ms (Views: 2.1ms | ActiveRecord: 83.0ms | Allocations: 5854)
+
+
+  [1m[36mCard Load (4.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (13.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (18.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (38.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (26.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 481ms (Views: 48.2ms | ActiveRecord: 433.0ms | Allocations: 22540)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:33:49 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:33:49 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:33:49 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mDeck Load (28.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (26.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 10.2ms | ActiveRecord: 26.7ms | Allocations: 4938)
+
+
+  [1m[36mUser Load (38.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mCard Load (26.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mFave Load (6.7ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mCard Load (2.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/models/user.rb:17:in `map'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mDeck Load (24.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCard Load (3.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+Completed 200 OK in 90ms (Views: 0.8ms | ActiveRecord: 69.3ms | Allocations: 14814)
+
+
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 117ms (Views: 53.7ms | ActiveRecord: 63.1ms | Allocations: 21862)
+
+
+Started GET "/decks" for ::1 at 2019-10-07 19:34:59 -0400
+Started GET "/cards" for ::1 at 2019-10-07 19:34:59 -0400
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:34:59 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mDeck Load (27.7ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  [1m[36mCard Load (23.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 7.0ms | ActiveRecord: 23.4ms | Allocations: 5589)
+
+
+  [1m[36mFave Load (14.9ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.1ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 41ms (Views: 1.6ms | ActiveRecord: 27.7ms | Allocations: 8156)
+
+
+  [1m[36mCard Load (92.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (3.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (9.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (10.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (3.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 194ms (Views: 42.2ms | ActiveRecord: 150.8ms | Allocations: 22184)
+
+
+Started GET "/cards" for ::1 at 2019-10-07 19:35:33 -0400
+Started GET "/decks" for ::1 at 2019-10-07 19:35:33 -0400
+Processing by CardsController#index as HTML
+Processing by DecksController#index as HTML
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  [1m[36mDeck Load (0.4ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.8ms | Allocations: 4228)
+
+
+  [1m[36mCard Load (2.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (8.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (1.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 73ms (Views: 55.8ms | ActiveRecord: 17.2ms | Allocations: 17598)
+
+
+Started GET "/auth/verify" for ::1 at 2019-10-07 19:35:34 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:20:in `authorize_request'
+  [1m[36mFave Load (2.2ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+  [1m[36mDeck Load (0.3ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+  [1m[36mCACHE Deck Load (0.0ms)[0m  [1m[34mSELECT "decks".* FROM "decks" WHERE "decks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/user.rb:17:in `block in get_faves'
+Completed 200 OK in 21ms (Views: 1.2ms | ActiveRecord: 6.0ms | Allocations: 3599)
+
+

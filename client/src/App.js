@@ -27,6 +27,12 @@ class App extends React.Component {
         password: '',
       },
       error: '',
+      newCardFormData: {
+        deck_id: '',
+        prompt: '',
+        response: '',
+        is_public: false,
+      }
     }
   }
 
@@ -54,6 +60,17 @@ class App extends React.Component {
     this.setState( prevState => ({
       loginFormData: {
         ...prevState.loginFormData,
+        [name]: value
+      }
+    }))
+  }
+
+  handleNewCardFormChange = (e) => {
+    const { name, value } = e.target;
+    console.log(e)
+    this.setState( prevState => ({
+      newCardFormData: {
+        ...prevState.newCardFormData,
         [name]: value
       }
     }))
@@ -97,11 +114,6 @@ class App extends React.Component {
     localStorage.removeItem('authToken');
   }
 
-  handleNewCard = async () => {
-    const newCard = await createCard(newCardFormData);
-
-  }
-
   /********************** API FUNCTIONS *****************************/
   allDecks = async () => {
     const decks = await getDecks();
@@ -115,6 +127,11 @@ class App extends React.Component {
     this.setState({
       cards
     })
+  }
+
+  handleNewCard = async () => {
+    const newCard = await createCard(this.state.newCardFormData);
+    return newCard;
   }
 
   componentDidMount = async () => {
@@ -137,10 +154,13 @@ class App extends React.Component {
           cards={this.state.cards}
           currentUser={this.state.currentUser}
           loginFormData={this.state.loginFormData}
+          newCardFormData={this.state.newCardFormData}
           handleLoginFormChange={this.handleLoginFormChange}
+          handleNewCardFormChange={this.handleNewCardFormChange}
           error={this.state.error}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
+          handleNewCard={this.handleNewCard}
         />
         <Footer 
           decks={this.state.decks} />

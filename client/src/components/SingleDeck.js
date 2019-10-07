@@ -16,18 +16,7 @@ export default function SingleDeck(props) {
   let flipCard = () => {
     isCardClicked === true ? setIsCardClicked(false): setIsCardClicked(true)
   }
-  
-  let prompts = deck.cards.map( (prompt, index) => {
-    return (
-      <Link 
-        key={prompt.id} 
-        onClick={()=>{
-          setCurrentCard(index);
-          setIsCardClicked(false) }}>
-        <li>{prompt.prompt}</li>
-      </Link>
-    )
-  })
+
   return (
     <div className="single-deck-container">
       <h2>{deck.topic}</h2>
@@ -35,7 +24,21 @@ export default function SingleDeck(props) {
         <div className="prompts-container">
           <h4>Prompts</h4>
           <ol>
-            {prompts}
+            {deck.cards.map( (prompt, index) => {
+              return (
+                <Link 
+                  key={prompt.id} 
+                  onClick={()=>{
+                    setCurrentCard(index);
+                    setIsCardClicked(false) }}>
+                  <li>
+                    {prompt.prompt} 
+                    {!prompt.is_public && (<><button>Edit</button> <button>Delete</button></>)}
+                  </li>
+                </Link>
+              )
+              })
+            }
             <Link to="/new-card"><li>Create your own!</li></Link>
           </ol>
         </div>

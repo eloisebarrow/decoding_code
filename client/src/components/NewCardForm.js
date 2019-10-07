@@ -7,26 +7,45 @@ export default function NewCardForm(props) {
       <h1>Make a new card!</h1>
       <form 
         className="new-card-form" 
-        onSubmit={(e)=>{
-        e.preventDefault();
+        onSubmit={
+          (e)=>{e.preventDefault();
+          props.handleNewCardFormChange()
         }}
       >
-        <select name="decks">
+        <select 
+          name="deck_id"
+          onChange={(e) => props.handleNewCardFormChange(e)}
+          >
+            <option>Select a topic</option>
           {
-            props.decks.map( deck => {
+            props.decks.map( (deck, index) => {
               return (
-                <option key={deck.id}>{deck.topic}</option>
+                <option 
+                  key={deck.id}
+                  value={index + 1}>{deck.topic}</option>
               )
             }) 
           }
         </select>
         
-        <label>Prompt: </label>
-        <input></input>
+        <label htmlFor="prompt">Prompt: </label>
+        <input
+          onChange={(e) => props.handleNewCardFormChange(e)}
+          value={props.newCardFormData.prompt}
+          type="text"
+          name="prompt">
+        </input>
 
         <label>Response: </label>
-        <textarea rows="7" cols="55"></textarea>
-
+        <textarea 
+          rows="7" 
+          cols="55" 
+          onChange={(e) => props.handleNewCardFormChange(e)}
+          value={props.newCardFormData.response}
+          type="text"
+          name="response">
+        </textarea>
+        
         <button>Submit</button>
       </form>
     </div>
