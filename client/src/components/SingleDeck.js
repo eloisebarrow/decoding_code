@@ -19,13 +19,13 @@ export default function SingleDeck(props) {
   
   let prompts = deck.cards.map( (prompt, index) => {
     return (
-      <button 
+      <Link 
         key={prompt.id} 
         onClick={()=>{
           setCurrentCard(index);
           setIsCardClicked(false) }}>
         <li>{prompt.prompt}</li>
-      </button>
+      </Link>
     )
   })
   return (
