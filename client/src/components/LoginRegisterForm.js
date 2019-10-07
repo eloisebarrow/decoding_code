@@ -4,7 +4,6 @@ import './LoginRegisterForm.css';
 export default function LoginRegisterForm(props) {
   return (
     <>
-      <h2>{props.title === 'login' ? "Login" : "Register"}</h2>
       <form className="login-form"
         onSubmit={(e) => {
         e.preventDefault()
@@ -14,6 +13,7 @@ export default function LoginRegisterForm(props) {
           props.handleLogin();
         }
       }}>
+        <h2 className="login-title">{props.title === 'login' ? "Login" : "Register"}</h2>
         {
           props.title === 'register' && (
             <> 
@@ -51,7 +51,9 @@ export default function LoginRegisterForm(props) {
           name="password" />
 
         <button>Submit</button>
+        <p>{props.error}</p>
       </form>
+      
     </>
   )
 }

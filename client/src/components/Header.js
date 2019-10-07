@@ -24,7 +24,7 @@ export default function Header(props) {
         </Link>
         { props.currentUser ? 
           <>
-          <p>Hi, {props.currentUser.first_name}</p>
+          <h4>Hi, {props.currentUser.first_name}</h4>
           </> : 
           <>
           <Link to="/login">Login</Link>

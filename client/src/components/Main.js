@@ -18,6 +18,7 @@ export default function Main(props) {
             loginFormData={props.loginFormData}
             handleLoginFormChange={props.handleLoginFormChange}
             handleLogin={props.handleLogin}
+            error={props.error}
           />
         )} />
         <Route path="/register" render={()=>(
@@ -25,7 +26,8 @@ export default function Main(props) {
             title={'register'}
             loginFormData={props.loginFormData}
             handleLoginFormChange={props.handleLoginFormChange}
-            handleRegister={props.handleRegister}  
+            handleRegister={props.handleRegister}
+            error={props.error}
           />
         )} />
         <Route path="/new-card" render={()=>(

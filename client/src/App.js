@@ -23,9 +23,27 @@ class App extends React.Component {
       email: '',
       password: '',
     },
+    error: '',
   }
 
   /********************** FORM FUNCTIONS *******************************/
+
+  clearForm = () => {
+    this.setState({
+      loginFormData: {
+        first_name: '',
+        last_name: '',
+        email: '',
+        password: '',
+      }
+    })
+  }
+
+  handleLoginError = () => {
+    this.setState({
+      error: 'Invalid Credentials'
+    })
+  }
 
   handleLoginFormChange = (e) => {
     const { name, value } = e.target;
@@ -40,16 +58,33 @@ class App extends React.Component {
 
   handleLogin = async () => {
     const currentUser = await loginUser(this.state.loginFormData)
-    this.setState({
-      currentUser
-    })
+    if (currentUser.error) {
+      this.handleLoginError();
+      this.clearForm();
+    } else {
+      this.setState({
+        currentUser,
+        error: ''
+      });
+      this.clearForm();
+      // this.props.history.push('/home');
+    }
   }
 
   handleRegister = async () => {
     const currentUser = await registerUser(this.state.loginFormData)
-    this.setState({
-      currentUser
-    })
+    if (currentUser.error) {
+      this.setState({
+        error: 'Invalid Credentials'
+      })
+      this.clearForm();
+    } else {
+      this.setState({
+        currentUser
+      });
+      this.clearForm();
+      // this.props.history.push('/')
+    }
   }
 
   handleLogout = () => {
@@ -90,9 +125,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header currentUser={this.state.currentUser} />
+        <Header 
+          currentUser={this.state.currentUser}
+           />
         <Main 
           decks={this.state.decks}
+          error={this.state.error}
           cards={this.state.cards}
           cardsByDeck={this.state.cardsByDeck}
           loginFormData={this.state.loginFormData}
