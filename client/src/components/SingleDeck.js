@@ -4,17 +4,31 @@ import { Link, Redirect } from 'react-router-dom';
 import SingleCard from './SingleCard';
 
 export default function SingleDeck(props) {
+  
+  const [currentCard, setCurrentCard] = React.useState(0)
+  const [isCardClicked, setIsCardClicked] = React.useState(false)
+
   const deck = props.decks.find( deck => deck.id == props.match.params.id );
   if (!deck) {
     return <Redirect to="/decks" />
   }
-  console.log('this is deck from singleDeck', deck)
-  const prompts = deck.cards.map( prompt => {
+
+  let flipCard = () => {
+    isCardClicked === true ? setIsCardClicked(false): setIsCardClicked(true)
+  }
+  
+  let prompts = deck.cards.map( (prompt, index) => {
     return (
-      <Link to="#" key={prompt.id}><li>{prompt.prompt}</li></Link>
+      <button 
+        key={prompt.id} 
+        onClick={()=>{
+          setCurrentCard(index);
+          setIsCardClicked(false) }}>
+        <li>{prompt.prompt}</li>
+      </button>
     )
   })
-    return (
+  return (
     <div className="single-deck-container">
       <h2>{deck.topic}</h2>
       <div className="single-card-container">
@@ -26,7 +40,11 @@ export default function SingleDeck(props) {
         </div>
 
         <div className="flashcard-container">
-          <SingleCard cards={deck.cards} />
+          <SingleCard 
+            cards={deck.cards}
+            currentCard={currentCard}
+            isCardClicked={isCardClicked}
+            flipCard={flipCard} />
           <div className="flashcard-directions">
             <p>prev</p>
             <p>1/10</p>

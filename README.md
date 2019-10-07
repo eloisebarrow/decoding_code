@@ -133,4 +133,4 @@ code example tbd
 
 **ERROR**: Can't register a user through front end but can through Insomnia. Getting error 422 'unprocessable entity'.
 
-**RESOLUTION**: tbd
+**RESOLUTION**: Had to pass strong params to registerUser in api-helper - i.e. {user: registerData} instead of just registerData.
