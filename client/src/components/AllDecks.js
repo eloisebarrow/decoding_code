@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { getCardsByDeck } from './../services/api-helper.js';
 
 export default function AllDecks(props) {
-  console.log('this is getcardsbydeck from AllDecks', props.getCardsByDeck)
   return (
     <div>
       <h1>All Decks</h1>

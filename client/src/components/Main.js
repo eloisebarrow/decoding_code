@@ -47,7 +47,7 @@ export default function Main(props) {
             cardsByDeck={props.cardsByDeck} />
         )} />
         <Route path="/" render={()=>(
-          <Home />
+          <Home currentUser={props.currentUser} />
         )} />
       </Switch>
       

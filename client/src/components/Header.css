@@ -22,6 +22,6 @@
   display: none;
 }
 
-.header-nav a {
+.header-nav a, .user-greeting {
   margin-left: 6%;
 }

@@ -4,11 +4,11 @@ import GetStarted from './GetStarted';
 import Browse from './Browse';
 import Aside from './Aside';
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div>
       <About />
-      <GetStarted />
+      <GetStarted currentUser={props.currentUser} />
       <Browse />
       <Aside />
     </div>

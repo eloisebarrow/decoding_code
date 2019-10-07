@@ -8,22 +8,27 @@ import {
   getCards,
   getCardsByDeck,
   loginUser,
-  registerUser
+  registerUser,
+  verifyUser
  } from './services/api-helper.js';
+ import { withRouter } from 'react-router-dom'; 
 
 class App extends React.Component {
-  state = {
-    decks: [],
-    cards: [],
-    cardsByDeck: [],
-    currentUser: null,
-    loginFormData: {
-      first_name: '',
-      last_name: '',
-      email: '',
-      password: '',
-    },
-    error: '',
+  constructor(props) {
+    super(props)
+    this.state = {
+      decks: [],
+      cards: [],
+      cardsByDeck: [],
+      currentUser: null,
+      loginFormData: {
+        first_name: '',
+        last_name: '',
+        email: '',
+        password: '',
+      },
+      error: '',
+    }
   }
 
   /********************** FORM FUNCTIONS *******************************/
@@ -67,7 +72,7 @@ class App extends React.Component {
         error: ''
       });
       this.clearForm();
-      // this.props.history.push('/home');
+      this.props.history.push('/');
     }
   }
 
@@ -83,7 +88,7 @@ class App extends React.Component {
         currentUser
       });
       this.clearForm();
-      // this.props.history.push('/')
+      this.props.history.push('/')
     }
   }
 
@@ -94,7 +99,7 @@ class App extends React.Component {
     localStorage.removeItem('authToken');
   }
 
-  /********************** API CALLS *****************************/
+  /********************** API FUNCTIONS *****************************/
   allDecks = async () => {
     const decks = await getDecks();
     this.setState({
@@ -110,16 +115,20 @@ class App extends React.Component {
   }
 
   allCardsByDeck = async () => {
-    const cards = await getCardsByDeck()
+    const cards = await getCardsByDeck(5)
     this.setState({
       cardsByDeck: cards
     })
   }
 
-  componentDidMount = () => {
+  componentDidMount = async () => {
     this.allDecks();
     this.allCards();
     this.allCardsByDeck();
+    const currentUser = await verifyUser();
+    if (currentUser) {
+      this.setState({ currentUser })
+    }
   }
 
   render() {
@@ -127,14 +136,15 @@ class App extends React.Component {
       <div className="App">
         <Header 
           currentUser={this.state.currentUser}
-           />
+          handleLogout={this.handleLogout} />
         <Main 
           decks={this.state.decks}
-          error={this.state.error}
           cards={this.state.cards}
+          currentUser={this.state.currentUser}
           cardsByDeck={this.state.cardsByDeck}
           loginFormData={this.state.loginFormData}
           handleLoginFormChange={this.handleLoginFormChange}
+          error={this.state.error}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
         />
@@ -144,4 +154,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withRouter(App);
