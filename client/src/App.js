@@ -148,7 +148,7 @@ class App extends React.Component {
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
         />
-        <Footer />
+        <Footer decks={this.state.decks} />
       </div>
     );
   }

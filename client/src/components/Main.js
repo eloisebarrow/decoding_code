@@ -36,9 +36,10 @@ export default function Main(props) {
         <Route path="/my-decks" render={()=>(
           <UserDecks />
         )} />
-        <Route exact path="/decks/:id/cards" render={()=>(
+        <Route exact path="/decks/:id/cards" render={(routerProps)=>(
           <SingleDeck 
-            cards={props.cards}
+            {...routerProps}
+            decks={props.decks}
             cardsByDeck={props.cardsByDeck} />
         )} />
         <Route path="/decks" render={()=>(
@@ -50,7 +51,6 @@ export default function Main(props) {
           <Home currentUser={props.currentUser} />
         )} />
       </Switch>
-      
     </div>
   )
 }

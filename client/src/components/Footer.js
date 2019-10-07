@@ -2,23 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
-export default function Footer() {
+export default function Footer(props) {
   return (
     <div className="footer-container">
       <nav className="footer-nav">
         <div>
-          <h4>Topics</h4>
+          <Link to="/decks"><h4>Topics</h4></Link>
           <ul>
-            <Link to="#"><li>General Programming</li></Link>
-            <Link to="#"><li>HTML</li></Link>
-            <Link to="#"><li>CSS</li></Link>
-            <Link to="#"><li>JavaScript</li></Link>
-            <Link to="#"><li>React</li></Link>
-            <Link to="#"><li>Ruby on Rails</li></Link>
-            <Link to="#"><li>Express.js</li></Link>
-            <Link to="#"><li>Node.js</li></Link>
-            <Link to="#"><li>SQL</li></Link>
-            <Link to="#"><li>Git and Github</li></Link>
+            {props.decks.map( deck => {
+              return (
+                  <Link to={`/decks/${deck.id}/cards`} key={deck.id}><li>{deck.topic}</li></Link>
+                )
+              }) 
+            }
           </ul>
         </div>
 
