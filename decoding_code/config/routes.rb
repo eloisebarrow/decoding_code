@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get '/decks/:id/cards', to: 'decks#card_by_deck'
   
+  get '/users/:id/faves', to: 'users#show_fave'
+
   resources :faves
   resources :cards
   resources :decks

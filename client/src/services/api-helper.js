@@ -3,6 +3,8 @@ const api = axios.create({
   baseURL: 'http://localhost:3000'
 })
 
+/************************* DECK/CARDS API CALLS ***********************/
+
 export const getDecks = async () => {
   try {
     const resp = await api.get('/decks');
@@ -11,15 +13,6 @@ export const getDecks = async () => {
     return e.message
   }
 };
-
-// export const getOneDeck = async (deckId) => {
-//   try {
-//     const resp = await api.get(`/decks/${deckId}`)
-//     return resp.data;
-//   } catch (e) {
-//     return e.messsage
-//   }
-// };
 
 export const getCards = async () => {
   try {
@@ -30,14 +23,17 @@ export const getCards = async () => {
   }
 };
 
-export const getCardsByDeck = async (deckId) => {
+export const createCard = async (newCardData) => {
   try {
-    const resp = await api.get(`/decks/${deckId}/cards`)
-    return resp.data;
+    const newCard = await api.post('/cards', { card: newCardData })
   } catch (e) {
-    return e.messsage
+    return e.message
   }
-};
+}
+
+
+
+/************************* USER API CALLS ***********************/
 
 export const loginUser = async (loginData) => {
   try {

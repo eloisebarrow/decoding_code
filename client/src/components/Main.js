@@ -31,7 +31,8 @@ export default function Main(props) {
           />
         )} />
         <Route path="/new-card" render={()=>(
-          <NewCardForm />
+          <NewCardForm 
+            decks={props.decks} />
         )} />
         <Route path="/my-decks" render={()=>(
           <UserDecks />
@@ -39,13 +40,11 @@ export default function Main(props) {
         <Route exact path="/decks/:id/cards" render={(routerProps)=>(
           <SingleDeck 
             {...routerProps}
-            decks={props.decks}
-            cardsByDeck={props.cardsByDeck} />
+            decks={props.decks} />
         )} />
         <Route path="/decks" render={()=>(
           <AllDecks 
-            decks={props.decks}
-            cardsByDeck={props.cardsByDeck} />
+            decks={props.decks} />
         )} />
         <Route path="/" render={()=>(
           <Home currentUser={props.currentUser} />

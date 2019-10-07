@@ -6,7 +6,6 @@ import Footer from './components/Footer';
 import { 
   getDecks,
   getCards,
-  getCardsByDeck,
   loginUser,
   registerUser,
   verifyUser
@@ -19,7 +18,6 @@ class App extends React.Component {
     this.state = {
       decks: [],
       cards: [],
-      cardsByDeck: [],
       currentUser: null,
       loginFormData: {
         first_name: '',
@@ -52,7 +50,6 @@ class App extends React.Component {
 
   handleLoginFormChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value)
     this.setState( prevState => ({
       loginFormData: {
         ...prevState.loginFormData,
@@ -114,17 +111,9 @@ class App extends React.Component {
     })
   }
 
-  allCardsByDeck = async () => {
-    const cards = await getCardsByDeck(5)
-    this.setState({
-      cardsByDeck: cards
-    })
-  }
-
   componentDidMount = async () => {
     this.allDecks();
     this.allCards();
-    this.allCardsByDeck();
     const currentUser = await verifyUser();
     if (currentUser) {
       this.setState({ currentUser })
@@ -141,14 +130,14 @@ class App extends React.Component {
           decks={this.state.decks}
           cards={this.state.cards}
           currentUser={this.state.currentUser}
-          cardsByDeck={this.state.cardsByDeck}
           loginFormData={this.state.loginFormData}
           handleLoginFormChange={this.handleLoginFormChange}
           error={this.state.error}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}
         />
-        <Footer decks={this.state.decks} />
+        <Footer 
+          decks={this.state.decks} />
       </div>
     );
   }
