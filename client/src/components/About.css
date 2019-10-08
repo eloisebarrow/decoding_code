@@ -17,9 +17,7 @@
 .about-container h3 {
   font-size: 1.2rem;
   width: 174px;
-  padding: 2% 0 0 43%;
-  padding-left: 43%;
-  color: black;
+  padding: 2% 0 0 14%;
 }
 
 .all-decks-button {
@@ -32,5 +30,9 @@
   padding: 3% 6%;
   font-size: 0.79rem;
   margin-right: 17%;
+}
+
+.about-button {
+  margin: 9% 4% 0 0;
 }
 

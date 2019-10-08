@@ -1,6 +1,5 @@
 .footer-container {
   background-color: #d1eecc;
-  margin-top: 5%;
 }
 
 .footer-nav {
@@ -23,4 +22,9 @@
 
 .footer-nav a:hover {
   text-decoration: underline;
+}
+
+footer {
+  border-top: 1px solid black;
+  margin: 0 7%;
 }

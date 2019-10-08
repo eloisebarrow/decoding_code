@@ -11078,3 +11078,75 @@ Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 1.2ms | Allocations: 3770)
 Completed 200 OK in 79ms (Views: 31.6ms | ActiveRecord: 47.3ms | Allocations: 18881)
 
 
+Started GET "/decks" for ::1 at 2019-10-08 16:49:13 -0400
+Started GET "/cards" for ::1 at 2019-10-08 16:49:13 -0400
+Processing by DecksController#index as HTML
+Processing by CardsController#index as HTML
+  [1m[36mDeck Load (46.5ms)[0m  [1m[34mSELECT "decks".* FROM "decks"[0m
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (44.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+Completed 200 OK in 144ms (Views: 98.8ms | ActiveRecord: 44.3ms | Allocations: 4873)
+
+
+  [1m[36mCard Load (67.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 1]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (11.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 2]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 3]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 4]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 5]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (10.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 6]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 7]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 8]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 9]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+  [1m[36mCard Load (2.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = $1[0m  [["deck_id", 10]]
+  ↳ app/controllers/decks_controller.rb:8:in `index'
+Completed 200 OK in 385ms (Views: 183.0ms | ActiveRecord: 196.9ms | Allocations: 19184)
+
+
+Started POST "/auth/login" for ::1 at 2019-10-08 16:51:48 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"", "last_name"=>"", "email"=>"ofarrellmeister@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"", "last_name"=>"", "email"=>"ofarrellmeister@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ofarrellmeister@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+Completed 500 Internal Server Error in 402ms (ActiveRecord: 261.6ms | Allocations: 3306)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass):
+  
+app/controllers/authentication_controller.rb:7:in `login'
+Started POST "/users" for ::1 at 2019-10-08 16:52:13 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"Ross", "last_name"=>"O'Farrell", "email"=>"ofarrellmeister@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ofarrellmeister@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ross"], ["last_name", "O'Farrell"], ["email", "ofarrellmeister@gmail.com"], ["password_digest", "$2a$12$MCGZMw3kbijpavVPQX7PFuLoeh4YyEV/ecEYyfJrNTSyytcrTad5C"], ["created_at", "2019-10-08 20:52:13.479317"], ["updated_at", "2019-10-08 20:52:13.479317"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (42.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mFave Load (19.0ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+Completed 200 OK in 454ms (Views: 0.7ms | ActiveRecord: 111.5ms | Allocations: 9623)
+
+
+Started POST "/auth/login" for ::1 at 2019-10-08 16:52:48 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"first_name"=>"", "last_name"=>"", "email"=>"ofarrellmeister@gmail.com", "password"=>"[FILTERED]", "authentication"=>{"first_name"=>"", "last_name"=>"", "email"=>"ofarrellmeister@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (40.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ofarrellmeister@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6:in `login'
+  [1m[36mFave Load (0.3ms)[0m  [1m[34mSELECT "faves".* FROM "faves" WHERE "faves"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/models/user.rb:17:in `map'
+Completed 200 OK in 293ms (Views: 0.3ms | ActiveRecord: 40.3ms | Allocations: 1512)
+
+
