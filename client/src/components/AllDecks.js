@@ -10,11 +10,15 @@ export default function AllDecks(props) {
       <h4>Select one to get started!</h4>
       <div className="decks-container">
         {props.decks.map( deck => {
-          return <div key={deck.id}>
-            <Link to={`decks/${deck.id}/cards`} className="deck-div" style={{backgroundImage: `url(${deck.img})`, backgroundSize: 'cover'}}>
-              {/* {deck.topic} */}
+          return (
+            <Link to={`decks/${deck.id}/cards`}>
+              <div 
+                key={deck.id} 
+                className="deck-div" 
+                style={{backgroundImage: `url(${deck.img})`, backgroundSize: 'cover'}}>
+              </div>
             </Link>
-          </div>
+          )
         })}
       </div>
     </div>

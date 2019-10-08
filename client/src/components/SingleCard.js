@@ -9,7 +9,7 @@ export default function SingleCard(props) {
     return (
       <div 
         key={index}
-        className={ props.isCardClicked ? 'answer-card' : null }>
+        className={ props.isCardClicked ? 'answer-card' : 'prompt-card' }>
           <Link 
             onClick={() => props.flipCard()} 
             >

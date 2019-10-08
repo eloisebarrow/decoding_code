@@ -15,7 +15,7 @@ export default function Browse(props) {
           )
         })}
       </div>
-      <Link to="/decks"><button className="all-decks-button">See All Decks</button></Link>
+      <Link to="/decks"><button className="all-decks-button browse-button">See All Decks</button></Link>
     </div>
   )
 }

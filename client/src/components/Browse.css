@@ -7,11 +7,11 @@
 
 .browse-deck-div {
   border: 1px solid black;
-  height: 200px;
-  width: 200px;
+  height: 175px;
+  width: 175px;
   margin-bottom: 3%;
 }
 
-.card-link {
-  z-index: 1;
+.browse-button {
+  margin: 3% 0;
 }
