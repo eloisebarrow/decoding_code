@@ -62,7 +62,9 @@ export default function Main(props) {
             decks={props.decks} />
         )} />
         <Route path="/" render={()=>(
-          <Home currentUser={props.currentUser} />
+          <Home 
+            currentUser={props.currentUser}
+            decks={props.decks} />
         )} />
       </Switch>
     </div>

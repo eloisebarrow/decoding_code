@@ -6,10 +6,6 @@
 }
 
 .deck-div {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border: 1px solid black;
   width: 300px;
   height: 300px;
   margin: 3% 0;

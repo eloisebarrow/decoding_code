@@ -1,10 +1,17 @@
 .browse-container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.example-deck {
+.browse-deck-div {
   border: 1px solid black;
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
+  margin-bottom: 3%;
+}
+
+.card-link {
+  z-index: 1;
 }

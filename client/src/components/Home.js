@@ -10,7 +10,7 @@ export default function Home(props) {
     <div className="home-container">
       <About />
       <GetStarted currentUser={props.currentUser} />
-      <Browse />
+      <Browse decks={props.decks} />
       <Aside />
     </div>
   )
