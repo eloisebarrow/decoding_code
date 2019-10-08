@@ -8,9 +8,8 @@ export default function NewCardForm(props) {
       <form 
         className="new-card-form" 
         onSubmit={
-          (e)=>{e.preventDefault();
-          props.handleNewCardFormChange()
-        }}
+          (e)=>props.handleNewCard(e)
+        }
       >
         <select 
           name="deck_id"
@@ -22,7 +21,8 @@ export default function NewCardForm(props) {
               return (
                 <option 
                   key={deck.id}
-                  value={index + 1}>{deck.topic}</option>
+                  value={index + 1}>{deck.topic}
+                </option>
               )
             }) 
           }
@@ -37,14 +37,14 @@ export default function NewCardForm(props) {
         </input>
 
         <label>Response: </label>
-        <textarea 
+        <input 
           rows="7" 
           cols="55" 
           onChange={(e) => props.handleNewCardFormChange(e)}
-          value={props.newCardFormData.response}
+          value={props.newCardFormData.answer}
           type="text"
-          name="response">
-        </textarea>
+          name="answer">
+        </input>
         
         <button>Submit</button>
       </form>

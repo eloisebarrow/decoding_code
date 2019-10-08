@@ -30,7 +30,7 @@ class App extends React.Component {
       newCardFormData: {
         deck_id: '',
         prompt: '',
-        response: '',
+        answer: '',
         is_public: false,
       }
     }

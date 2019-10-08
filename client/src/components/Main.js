@@ -34,7 +34,8 @@ export default function Main(props) {
           <NewCardForm 
             decks={props.decks}
             newCardFormData={props.newCardFormData}
-            handleNewCardFormChange={props.handleNewCardFormChange} />
+            handleNewCardFormChange={props.handleNewCardFormChange}
+            handleNewCard={props.handleNewCard} />
         )} />
         <Route path="/my-decks" render={()=>(
           <UserDecks />
