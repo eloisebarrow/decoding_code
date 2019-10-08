@@ -6,16 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Deck.create!([
-  { topic: "General Programming", is_public: true, user_id: nil },
-  { topic: "HTML", is_public: true, user_id: nil },
-  { topic: "CSS", is_public: true, user_id: nil },
-  { topic: "JavaScript", is_public: true, user_id: nil },
-  { topic: "React", is_public: true, user_id: nil },
-  { topic: "Git and Github", is_public: true, user_id: nil },
-  { topic: "Express.js", is_public: true, user_id: nil },
-  { topic: "Node.js", is_public: true, user_id: nil },
-  { topic: "SQL", is_public: true, user_id: nil },
-  { topic: "Ruby on Rails", is_public: true, user_id: nil },
+  { topic: "General Programming", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570549941/sei_project_4/deck%20images/gp.jpg" },
+  { topic: "HTML", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570550398/sei_project_4/deck%20images/html.png" },
+  { topic: "CSS", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570550398/sei_project_4/deck%20images/css.png" },
+  { topic: "JavaScript", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570550213/sei_project_4/deck%20images/js.png" },
+  { topic: "React", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570550459/sei_project_4/deck%20images/react.png" },
+  { topic: "Git and Github", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570550545/sei_project_4/deck%20images/git.png" },
+  { topic: "Express.js", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570550759/sei_project_4/deck%20images/express.png" },
+  { topic: "Node.js", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570550836/sei_project_4/deck%20images/node.png" },
+  { topic: "SQL", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570550885/sei_project_4/deck%20images/sql.png" },
+  { topic: "Ruby on Rails", is_public: true, user_id: nil, img: "https://res.cloudinary.com/eloise/image/upload/v1570550960/sei_project_4/deck%20images/ruby.png" },
 ])
 
 Card.create!([

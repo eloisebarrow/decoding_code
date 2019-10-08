@@ -32,6 +32,23 @@ export const createCard = async (newCardData) => {
   }
 }
 
+export const updateCard = async (updateCardData, cardId) => {
+  try {
+    const resp = await api.put(`/cards/${cardId}`, { card: updateCardData, cardId })
+    return resp.data;
+  } catch (e) {
+    return e.message
+  }
+}
+
+export const deleteCard = async (cardId) => {
+  try {
+    await api.delete(`/cards/${cardId}`)
+  } catch (e) {
+    return e.message;
+  }
+}
+
 /************************* USER API CALLS ***********************/
 
 export const loginUser = async (loginData) => {

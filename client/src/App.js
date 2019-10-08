@@ -7,6 +7,8 @@ import {
   getDecks,
   getCards,
   createCard,
+  updateCard,
+  deleteCard,
   loginUser,
   registerUser,
   verifyUser
@@ -32,11 +34,11 @@ class App extends React.Component {
         prompt: '',
         answer: '',
         is_public: false,
-      }
+      },
     }
   }
 
-  /********************** FORM FUNCTIONS *******************************/
+  /********************** GENERAL FORM FUNCTIONS *******************************/
 
   clearForm = () => {
     this.setState({
@@ -55,22 +57,13 @@ class App extends React.Component {
     })
   }
 
+  /************************** LOGIN FORM FUNCTIONS **************************/
+
   handleLoginFormChange = (e) => {
     const { name, value } = e.target;
     this.setState( prevState => ({
       loginFormData: {
         ...prevState.loginFormData,
-        [name]: value
-      }
-    }))
-  }
-
-  handleNewCardFormChange = (e) => {
-    const { name, value } = e.target;
-    console.log(e)
-    this.setState( prevState => ({
-      newCardFormData: {
-        ...prevState.newCardFormData,
         [name]: value
       }
     }))
@@ -114,6 +107,28 @@ class App extends React.Component {
     localStorage.removeItem('authToken');
   }
 
+  /*********************** NEW CARD FORM FUNCTIONS ***************************/
+
+  handleNewCardFormChange = (e) => {
+    const { name, value } = e.target;
+    this.setState( prevState => ({
+      newCardFormData: {
+        ...prevState.newCardFormData,
+        [name]: value
+      }
+    }))
+  }
+
+  handleUpdateForm = (e, cardId) => {
+    e.preventDefault();
+    const cardData = this.state.cards.find( card => card.id === cardId );
+    const { created_at, updated_at, id, ...card } = cardData;
+    this.props.history.push(`/update-card/${cardId}`)
+    this.setState({
+      newCardFormData: card
+    })
+  }
+
   /********************** API FUNCTIONS *****************************/
   allDecks = async () => {
     const decks = await getDecks();
@@ -132,6 +147,28 @@ class App extends React.Component {
   handleNewCard = async () => {
     const newCard = await createCard(this.state.newCardFormData);
     return newCard;
+  }
+
+  handleUpdateCard = (e, updateCardId) => {
+    e.preventDefault();
+    updateCard(this.state.newCardFormData, updateCardId);
+    this.props.history.push('/decks');
+  }
+
+  handleDeleteCard = (deleteCardId, e) => {
+    e.preventDefault();
+    // e.stopPropagation();
+    deleteCard(deleteCardId)
+    console.log(deleteCardId)
+    this.setState(prevState => ({
+      cards: prevState.cards.filter((card) => card.id !== deleteCardId),
+      decks: prevState.decks.map((deck) => {
+        return {
+          cards: deck.cards.filter((card) => card.id !== deleteCardId),
+          ...deck
+        } 
+      })
+    }))
   }
 
   componentDidMount = async () => {
@@ -157,6 +194,9 @@ class App extends React.Component {
           newCardFormData={this.state.newCardFormData}
           handleLoginFormChange={this.handleLoginFormChange}
           handleNewCardFormChange={this.handleNewCardFormChange}
+          handleDeleteCard={this.handleDeleteCard}
+          handleUpdateCard={this.handleUpdateCard}
+          handleUpdateForm={this.handleUpdateForm}
           error={this.state.error}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}

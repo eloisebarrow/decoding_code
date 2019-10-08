@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   width: 50%;
+  justify-content: space-around;
 }
 
 .header-nav ul {
@@ -24,4 +25,8 @@
 
 .header-nav a, .user-greeting {
   margin-left: 6%;
+}
+
+@media screen and (min-width: 600px) {
+
 }

@@ -8,13 +8,13 @@ export default function SingleDeck(props) {
   const [currentCard, setCurrentCard] = React.useState(0)
   const [isCardClicked, setIsCardClicked] = React.useState(false)
 
-  const deck = props.decks.find( deck => deck.id == props.match.params.id );
+  const deck = props.decks.find( deck => deck.id.toString() === props.match.params.id );
   if (!deck) {
     return <Redirect to="/decks" />
   }
 
   let flipCard = () => {
-    isCardClicked === true ? setIsCardClicked(false): setIsCardClicked(true)
+    isCardClicked ? setIsCardClicked(false) : setIsCardClicked(true)
   }
 
   return (
@@ -33,7 +33,7 @@ export default function SingleDeck(props) {
                     setIsCardClicked(false) }}>
                   <li>
                     {prompt.prompt} 
-                    {!prompt.is_public && (<><button>Edit</button> <button>Delete</button></>)}
+                    {!prompt.is_public && (<><button onClick={(e)=>{props.handleUpdateForm(e, prompt.id)}}>Edit</button> <button onClick={(e)=>{props.handleDeleteCard(prompt.id, e)}}>Delete</button></>)}
                   </li>
                 </Link>
               )

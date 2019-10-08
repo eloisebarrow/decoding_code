@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import './Footer.css';
 
 export default function Footer(props) {
@@ -11,7 +11,7 @@ export default function Footer(props) {
           <ul>
             {props.decks.map( deck => {
               return (
-                  <Link to={`/decks/${deck.id}/cards`} key={deck.id}><li>{deck.topic}</li></Link>
+                  <Link to={`decks/${deck.id}/cards`} key={deck.id}><li>{deck.topic}</li></Link>
                 )
               }) 
             }

@@ -32,10 +32,20 @@ export default function Main(props) {
         )} />
         <Route path="/new-card" render={()=>(
           <NewCardForm 
+            title={"new"}
             decks={props.decks}
             newCardFormData={props.newCardFormData}
             handleNewCardFormChange={props.handleNewCardFormChange}
             handleNewCard={props.handleNewCard} />
+        )} />
+        <Route path="/update-card/:id" render={(routerProps)=>(
+          <NewCardForm
+            {...routerProps}
+            title={"update"}
+            decks={props.decks}
+            newCardFormData={props.newCardFormData}
+            handleNewCardFormChange={props.handleNewCardFormChange}
+            handleUpdateCard={props.handleUpdateCard} />
         )} />
         <Route path="/my-decks" render={()=>(
           <UserDecks />
@@ -43,7 +53,9 @@ export default function Main(props) {
         <Route exact path="/decks/:id/cards" render={(routerProps)=>(
           <SingleDeck 
             {...routerProps}
-            decks={props.decks} />
+            decks={props.decks}
+            handleDeleteCard={props.handleDeleteCard}
+            handleUpdateForm={props.handleUpdateForm} />
         )} />
         <Route path="/decks" render={()=>(
           <AllDecks 

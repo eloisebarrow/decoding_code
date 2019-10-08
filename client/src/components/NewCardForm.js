@@ -4,11 +4,17 @@ import './NewCardForm.css';
 export default function NewCardForm(props) {
   return (
     <div className="new-card-form-container">
-      <h1>Make a new card!</h1>
+      {props.title === 'new' ? <h1>Make a new card!</h1> : <h1>Update your card</h1>}
       <form 
         className="new-card-form" 
-        onSubmit={
-          (e)=>props.handleNewCard(e)
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (props.title === "update") {
+            props.handleUpdateCard(e, props.match.params.id)
+          } else if (props.title === "new") {
+            props.handleNewCard(e)
+          }
+        }
         }
       >
         <select 
@@ -21,32 +27,38 @@ export default function NewCardForm(props) {
               return (
                 <option 
                   key={deck.id}
-                  value={index + 1}>{deck.topic}
+                  value={index + 1}
+                  >
+                {deck.topic}
                 </option>
               )
             }) 
           }
         </select>
-        
-        <label htmlFor="prompt">Prompt: </label>
-        <input
-          onChange={(e) => props.handleNewCardFormChange(e)}
-          value={props.newCardFormData.prompt}
-          type="text"
-          name="prompt">
-        </input>
 
-        <label>Response: </label>
-        <input 
-          rows="7" 
-          cols="55" 
-          onChange={(e) => props.handleNewCardFormChange(e)}
-          value={props.newCardFormData.answer}
-          type="text"
-          name="answer">
-        </input>
-        
-        <button>Submit</button>
+        <section className="new-card-inputs-container">
+          {/* <label htmlFor="prompt">Prompt: </label> */}
+          <input
+            onChange={(e) => props.handleNewCardFormChange(e)}
+            value={props.newCardFormData.prompt}
+            type="text"
+            name="prompt"
+            placeholder="Prompt">
+          </input>
+
+          {/* <label>Response: </label> */}
+          <input 
+            rows="7" 
+            cols="55" 
+            onChange={(e) => props.handleNewCardFormChange(e)}
+            value={props.newCardFormData.answer}
+            type="text"
+            name="answer"
+            placeholder="Response">
+          </input>
+        </section>
+
+        <button type="submit">Submit</button>
       </form>
     </div>
   )
