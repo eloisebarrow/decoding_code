@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :decks
   has_many :faves, class_name: "Fave"
+  has_many :cards
 
   def get_faves
     {

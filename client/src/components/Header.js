@@ -33,8 +33,6 @@ export default function Header(props) {
           </>
         }
       </nav>
-
-
     </div>
   )
 }
