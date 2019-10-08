@@ -23,6 +23,8 @@
 }
 
 .about-container button {
+  border: none;
+  border-radius: 3%;
   background: #000000;
   color: #FFFFFF;
   font-weight: 800;
@@ -31,3 +33,4 @@
   font-size: 0.79rem;
   margin-right: 17%;
 }
+
