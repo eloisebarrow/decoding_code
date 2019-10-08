@@ -1,5 +1,5 @@
 .new-card-form-container {
-  margin: 0 auto;
+  margin: 0 auto 3% auto;
 }
 
 .new-card-form {
@@ -27,8 +27,4 @@
   padding: 22% 8%;
   margin-top: 8%;
   text-align: center;
-}
-
-.new-card-inputs-container select, option {
-  
 }

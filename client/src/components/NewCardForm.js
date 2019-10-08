@@ -14,8 +14,7 @@ export default function NewCardForm(props) {
           } else if (props.title === "new") {
             props.handleNewCard(e)
           }
-        }
-        }
+        }}
       >
         <select 
           name="deck_id"
@@ -37,7 +36,6 @@ export default function NewCardForm(props) {
         </select>
 
         <section className="new-card-inputs-container">
-          {/* <label htmlFor="prompt">Prompt: </label> */}
           <input
             onChange={(e) => props.handleNewCardFormChange(e)}
             value={props.newCardFormData.prompt}
@@ -46,7 +44,6 @@ export default function NewCardForm(props) {
             placeholder="Prompt">
           </input>
 
-          {/* <label>Response: </label> */}
           <input 
             rows="7" 
             cols="55" 

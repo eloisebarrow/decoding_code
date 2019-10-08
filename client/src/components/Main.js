@@ -54,6 +54,7 @@ export default function Main(props) {
           <SingleDeck 
             {...routerProps}
             decks={props.decks}
+            currentUser={props.currentUser}
             handleDeleteCard={props.handleDeleteCard}
             handleUpdateForm={props.handleUpdateForm} />
         )} />

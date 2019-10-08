@@ -13,7 +13,7 @@ import {
   registerUser,
   verifyUser
  } from './services/api-helper.js';
- import { withRouter } from 'react-router-dom'; 
+ import { withRouter, Redirect } from 'react-router-dom'; 
 
 class App extends React.Component {
   constructor(props) {
@@ -149,26 +149,28 @@ class App extends React.Component {
     return newCard;
   }
 
-  handleUpdateCard = (e, updateCardId) => {
+  handleUpdateCard = async (e, updateCardId) => {
     e.preventDefault();
-    updateCard(this.state.newCardFormData, updateCardId);
-    this.props.history.push('/decks');
+    await updateCard(this.state.newCardFormData, updateCardId);
+    this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`);    
   }
 
-  handleDeleteCard = (deleteCardId, e) => {
+  handleDeleteCard = async (deleteCardId, e) => {
     e.preventDefault();
-    // e.stopPropagation();
-    deleteCard(deleteCardId)
+    await deleteCard(deleteCardId)
     console.log(deleteCardId)
     this.setState(prevState => ({
       cards: prevState.cards.filter((card) => card.id !== deleteCardId),
       decks: prevState.decks.map((deck) => {
         return {
-          cards: deck.cards.filter((card) => card.id !== deleteCardId),
-          ...deck
+            ...deck,
+            cards: deck.cards.filter((card) => {
+            return card.id !== deleteCardId;
+          })
         } 
       })
     }))
+    this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`)
   }
 
   componentDidMount = async () => {

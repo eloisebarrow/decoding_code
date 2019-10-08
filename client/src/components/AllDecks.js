@@ -11,7 +11,7 @@ export default function AllDecks(props) {
       <div className="decks-container">
         {props.decks.map( deck => {
           return (
-            <Link to={`decks/${deck.id}/cards`}>
+            <Link to={`/decks/${deck.id}/cards`}>
               <div 
                 key={deck.id} 
                 className="deck-div" 

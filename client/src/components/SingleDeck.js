@@ -24,22 +24,26 @@ export default function SingleDeck(props) {
         <div className="prompts-container">
           <h4>Prompts</h4>
           <ol>
-            {deck.cards.map( (prompt, index) => {
-              return (
-                <Link 
-                  key={prompt.id} 
-                  onClick={()=>{
-                    setCurrentCard(index);
-                    setIsCardClicked(false) }}>
-                  <li>
-                    {prompt.prompt} 
-                    {!prompt.is_public && (<><button onClick={(e)=>{props.handleUpdateForm(e, prompt.id)}}>Edit</button> <button onClick={(e)=>{props.handleDeleteCard(prompt.id, e)}}>Delete</button></>)}
-                  </li>
-                </Link>
-              )
+            {deck.cards.map( (card, index) => {
+              // if (card.is_public) {
+                return (
+                  <Link 
+                    key={card.id} 
+                    onClick={()=>{
+                      setCurrentCard(index);
+                      setIsCardClicked(false) }}>
+                    <li>
+                      {card.prompt} 
+                      {!card.is_public && 
+                        (<><button onClick={(e)=>{props.handleUpdateForm(e, card.id)}}>Edit</button> 
+                        <button onClick={(e)=>{props.handleDeleteCard(card.id, e)}}>Delete</button></>)}
+                    </li>
+                  </Link>
+                )
+              
               })
             }
-            <Link to="/new-card"><li>Create your own!</li></Link>
+            <Link to={props.currentUser ? '/new-card' : '/login'}><li>Create your own!</li></Link>
           </ol>
         </div>
 
