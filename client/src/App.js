@@ -12,7 +12,8 @@ import {
   loginUser,
   registerUser,
   verifyUser,
-  createFave
+  createFave,
+  showFaves
  } from './services/api-helper.js';
  import { withRouter } from 'react-router-dom'; 
 
@@ -23,6 +24,7 @@ class App extends React.Component {
       decks: [],
       cards: [],
       currentUser: null,
+      faves: [],
       loginFormData: {
         first_name: '',
         last_name: '',
@@ -83,7 +85,7 @@ class App extends React.Component {
         error: ''
       });
       this.clearForm();
-      this.props.history.push('/');
+      this.props.history.push('/my-decks');
     }
   }
 
@@ -99,7 +101,7 @@ class App extends React.Component {
         currentUser
       });
       this.clearForm();
-      this.props.history.push('/')
+      this.props.history.push('/my-decks')
     }
   }
 
@@ -110,7 +112,7 @@ class App extends React.Component {
     localStorage.removeItem('authToken');
   }
 
-  /*********************** NEW CARD FORM FUNCTIONS ***************************/
+  /*********************** NEW/UPDATE CARD FORM FUNCTIONS ***************************/
 
   handleNewCardFormChange = (e) => {
     const { name, value } = e.target;
@@ -184,6 +186,17 @@ class App extends React.Component {
     return card;
   }
 
+  showFaves = async () => {
+    console.log('handleShowFaves')
+    const faves = await showFaves();
+    this.setState( prevState => ({
+      faves: [
+        ...prevState.faves,
+        faves
+      ]
+    }))
+  }
+
   componentDidMount = async () => {
     this.allDecks();
     this.allCards();
@@ -197,6 +210,7 @@ class App extends React.Component {
         }
       }))
     }
+    this.showFaves();
   }
 
   render() {
@@ -217,6 +231,7 @@ class App extends React.Component {
           handleDeleteCard={this.handleDeleteCard}
           handleUpdateCard={this.handleUpdateCard}
           handleUpdateForm={this.handleUpdateForm}
+          faves={this.state.faves}
           error={this.state.error}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}

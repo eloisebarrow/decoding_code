@@ -14,15 +14,6 @@ export const getDecks = async () => {
   }
 };
 
-export const createFave = async (userId, deckId) => {
-  try {
-    const newFave = await api.post(`/decks/${deckId}/faves`, userId, deckId)
-    return newFave;
-  } catch (e) {
-    return e.message
-  }  
-}
-
 export const getCards = async () => {
   try {
     const resp = await api.get('/cards');
@@ -53,6 +44,26 @@ export const updateCard = async (updateCardData, cardId) => {
 export const deleteCard = async (cardId) => {
   try {
     await api.delete(`/cards/${cardId}`)
+  } catch (e) {
+    return e.message;
+  }
+}
+
+/************************* FAVE API CALLS ***********************/
+
+export const createFave = async (userId, deckId) => {
+  try {
+    const newFave = await api.post(`/decks/${deckId}/faves`, userId, deckId)
+    return newFave;
+  } catch (e) {
+    return e.message
+  }  
+}
+
+export const showFaves = async () => {
+  try {
+    const resp = await api.get('/faves')
+    return resp.data;
   } catch (e) {
     return e.message;
   }

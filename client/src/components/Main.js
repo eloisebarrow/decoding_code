@@ -48,7 +48,10 @@ export default function Main(props) {
             handleUpdateCard={props.handleUpdateCard} />
         )} />
         <Route path="/my-decks" render={()=>(
-          <UserDecks />
+          <UserDecks
+            decks={props.decks}
+            faves={props.faves}
+            handleAddFave={props.handleAddFave} />
         )} />
         <Route exact path="/decks/:id/cards" render={(routerProps)=>(
           <SingleDeck 
