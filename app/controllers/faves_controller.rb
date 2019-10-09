@@ -9,7 +9,7 @@ class FavesController < ApplicationController
     render json: @faves
   end
 
-  # POST /faves
+  # POST /decks/:deck_id/faves
   def create
     @fave = Fave.new({
       user: @current_user,
@@ -17,7 +17,7 @@ class FavesController < ApplicationController
     })
 
     if @fave.save
-      render json: @fave, status: :created, location: @fave
+      render json: @fave, status: :created
     else
       render json: @fave.errors, status: :unprocessable_entity
     end

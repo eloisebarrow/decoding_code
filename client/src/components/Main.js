@@ -60,7 +60,8 @@ export default function Main(props) {
         )} />
         <Route path="/decks" render={()=>(
           <AllDecks 
-            decks={props.decks} />
+            decks={props.decks}
+            handleAddFave={props.handleAddFave} />
         )} />
         <Route path="/" render={()=>(
           <Home 

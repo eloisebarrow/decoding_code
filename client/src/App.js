@@ -11,7 +11,8 @@ import {
   deleteCard,
   loginUser,
   registerUser,
-  verifyUser
+  verifyUser,
+  createFave
  } from './services/api-helper.js';
  import { withRouter } from 'react-router-dom'; 
 
@@ -176,6 +177,13 @@ class App extends React.Component {
     this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`)
   }
 
+  handleAddFave = async (deckId, e) => {
+    e.preventDefault()
+    const parsedDeckId = parseInt(deckId)
+    const card = await createFave(this.state.currentUser.id, parsedDeckId)
+    return card;
+  }
+
   componentDidMount = async () => {
     this.allDecks();
     this.allCards();
@@ -203,6 +211,7 @@ class App extends React.Component {
           currentUser={this.state.currentUser}
           loginFormData={this.state.loginFormData}
           newCardFormData={this.state.newCardFormData}
+          handleAddFave={this.handleAddFave}
           handleLoginFormChange={this.handleLoginFormChange}
           handleNewCardFormChange={this.handleNewCardFormChange}
           handleDeleteCard={this.handleDeleteCard}

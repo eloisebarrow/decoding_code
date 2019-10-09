@@ -1,0 +1,11 @@
+.fave-button {
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 100%;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  color: #FFFFFF;
+  background-color: #000;
+}
