@@ -16,7 +16,7 @@ class CardsController < ApplicationController
   # POST /cards
   def create
     @card = Card.new(card_params)
-
+    puts @card
     if @card.save
       render json: @card, status: :created, location: @card
     else
@@ -46,6 +46,6 @@ class CardsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def card_params
-      params.require(:card).permit(:prompt, :answer, :is_public, :deck_id)
+      params.require(:card).permit(:prompt, :answer, :is_public, :deck_id, :user_id)
     end
 end

@@ -19,7 +19,7 @@ export default function NewCardForm(props) {
         <select 
           name="deck_id"
           onChange={(e) => props.handleNewCardFormChange(e)}
-          >
+        >
             <option>Select a topic</option>
           {
             props.decks.map( (deck, index) => {

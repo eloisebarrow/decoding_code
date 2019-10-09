@@ -13,7 +13,7 @@ import {
   registerUser,
   verifyUser
  } from './services/api-helper.js';
- import { withRouter, Redirect } from 'react-router-dom'; 
+ import { withRouter } from 'react-router-dom'; 
 
 class App extends React.Component {
   constructor(props) {
@@ -34,6 +34,7 @@ class App extends React.Component {
         prompt: '',
         answer: '',
         is_public: false,
+        user_id: null,
       },
     }
   }
@@ -70,6 +71,7 @@ class App extends React.Component {
   }
 
   handleLogin = async () => {
+    
     const currentUser = await loginUser(this.state.loginFormData)
     if (currentUser.error) {
       this.handleLoginError();
@@ -145,6 +147,7 @@ class App extends React.Component {
   }
 
   handleNewCard = async () => {
+    console.log(this.state.newCardFormData)
     const newCard = await createCard(this.state.newCardFormData);
     return newCard;
   }
@@ -178,11 +181,18 @@ class App extends React.Component {
     this.allCards();
     const currentUser = await verifyUser();
     if (currentUser) {
-      this.setState({ currentUser })
+      this.setState( prevState => ({
+        currentUser,
+        newCardFormData: {
+          ...prevState.newCardFormData, 
+          user_id: currentUser.id
+        }
+      }))
     }
   }
 
   render() {
+    console.log('this is currentUser', this.state.currentUser)
     return (
       <div className="App">
         <Header 
