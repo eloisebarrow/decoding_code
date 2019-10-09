@@ -25,7 +25,7 @@ export default function SingleDeck(props) {
           <h4>Prompts</h4>
           <ol>
             {deck.cards.map( (card, index) => {
-              // if (card.is_public) {
+              if (card.is_public || (props.currentUser && card.user_id === props.currentUser.id)) {
                 return (
                   <Link 
                     key={card.id} 
@@ -40,7 +40,7 @@ export default function SingleDeck(props) {
                     </li>
                   </Link>
                 )
-              
+              }
               })
             }
             <Link to={props.currentUser ? '/new-card' : '/login'}><li>Create your own!</li></Link>
