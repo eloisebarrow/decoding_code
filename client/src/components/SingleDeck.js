@@ -22,7 +22,7 @@ export default function SingleDeck(props) {
       <h2>{deck.topic}</h2>
       <div className="single-card-container">
         <div className="prompts-container">
-          <h4>Prompts</h4>
+          <h3>Click a prompt to start studying!</h3>
           <ol>
             {deck.cards.map( (card, index) => {
               if (card.is_public || (props.currentUser && card.user_id === props.currentUser.id)) {
@@ -54,9 +54,9 @@ export default function SingleDeck(props) {
             isCardClicked={isCardClicked}
             flipCard={flipCard} />
           <div className="flashcard-directions">
-            <p>prev</p>
+            {/* <p>prev</p>
             <p>1/10</p>
-            <p>next</p>
+            <p>next</p> */}
           </div>
         </div>
       </div>

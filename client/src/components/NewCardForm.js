@@ -4,7 +4,7 @@ import './NewCardForm.css';
 export default function NewCardForm(props) {
   return (
     <div className="new-card-form-container">
-      {props.title === 'new' ? <h1>Make a new card!</h1> : <h1>Update your card</h1>}
+      {props.title === 'new' ? <h2>Make a new card!</h2> : <h2>Update your card</h2>}
       <form 
         className="new-card-form" 
         onSubmit={(e) => {
@@ -55,7 +55,7 @@ export default function NewCardForm(props) {
           </input>
         </section>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
   )

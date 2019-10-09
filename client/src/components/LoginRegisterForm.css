@@ -17,16 +17,16 @@
   background-color: #FFFFFF;
 }
 
-.login-form label, input, button {
+.submit-button, .login-form label, input {
   margin-top: 5%;
 }
 
-.login-form label, button {
+.submit-button, .login-form label {
   font-size: 1.25rem;
   text-align: left;
 }
 
-.login-form button {
+.submit-button {
   background-color: #000000;
   color: #FFFFFF;
   border: none;

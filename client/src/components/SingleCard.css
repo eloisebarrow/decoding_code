@@ -2,10 +2,6 @@
   border: 1px solid black;
 }
 
-.prompt-card, .answer-card {
-  font-family: 'Anonymous Pro', monospace;
-}
-
 .prompt-card {
   height: 118px;
   display: flex;

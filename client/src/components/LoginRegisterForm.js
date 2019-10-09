@@ -47,7 +47,7 @@ export default function LoginRegisterForm(props) {
           type="password" 
           name="password" />
 
-        <button>Submit</button>
+        <button className="submit-button">Submit</button>
         <p>{props.error}</p>
       </form>
       

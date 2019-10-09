@@ -36,3 +36,28 @@
   margin: 9% 4% 0 0;
 }
 
+@media screen and (min-width: 600px) {
+  .about-container {
+    width: 100vw;
+  }
+
+  .about-container h2 {
+    font-size: 1.6rem;
+    width: 287px;
+    line-height: 38px;
+    padding: 0 0 0 2%;
+  }
+
+  .about-container h3 {
+    font-size: 1.3rem;
+    width: 192px;
+    padding: 1% 0 0 5%;
+  }
+
+  .about-button {
+    margin: 1% 74% 0 0;
+    font-weight: 700;
+    padding: 1.5% 4%;
+    font-size: 1rem;
+  }
+}
