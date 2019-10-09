@@ -1,5 +1,6 @@
 .footer-container {
-  background-color: #d1eecc;
+  background-color: #2a1a5e;
+  color: #FFFFFF;
 }
 
 .footer-nav {
@@ -14,10 +15,11 @@
 .footer-nav li {
   list-style: none;
   line-height: 1.6rem;
+  color: #FFFFFF;
 }
 
 .footer-nav a {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .footer-nav a:hover {
@@ -25,6 +27,6 @@
 }
 
 footer {
-  border-top: 1px solid black;
+  border-top: 1px solid #FFFFFF;
   margin: 0 7%;
 }

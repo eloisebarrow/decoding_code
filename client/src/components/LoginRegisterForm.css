@@ -4,5 +4,32 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
+  background-color: rgba(255, 143, 0, 0.5);
+}
+
+.login-form input {
+  border: none;
+  border-radius: 3%;
+  border-bottom: 2px solid black;
+  font-size: 1.5rem;
+  padding: 8% 13%;
+  background-color: #FFFFFF;
+}
+
+.login-form label, input, button {
+  margin-top: 5%;
+}
+
+.login-form label, button {
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+.login-form button {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4%;
+  padding: 3% 17%;
 }

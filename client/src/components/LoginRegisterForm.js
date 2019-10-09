@@ -22,16 +22,14 @@ export default function LoginRegisterForm(props) {
                 onChange={(e) => props.handleLoginFormChange(e)}
                 value={props.loginFormData.first_name}
                 type="text" 
-                name="first_name" 
-                placeholder="Eloise"></input>
+                name="first_name" />
 
               <label htmlFor="last_name">Last Name: </label>
               <input 
                 onChange={(e) => props.handleLoginFormChange(e)}
                 value={props.loginFormData.last_name}
                 type="text" 
-                name="last_name" 
-                placeholder="Barrow"></input>
+                name="last_name" />
             </>
           )
         }
@@ -40,8 +38,7 @@ export default function LoginRegisterForm(props) {
           onChange={(e) => props.handleLoginFormChange(e)} 
           value={props.loginFormData.email} 
           type="email" 
-          name="email" 
-          placeholder="superdev@rockstarengineers.com" />
+          name="email" />
 
         <label htmlFor="password">Password: </label>
         <input 

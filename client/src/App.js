@@ -74,7 +74,6 @@ class App extends React.Component {
   }
 
   handleLogin = async () => {
-    
     const currentUser = await loginUser(this.state.loginFormData)
     if (currentUser.error) {
       this.handleLoginError();
