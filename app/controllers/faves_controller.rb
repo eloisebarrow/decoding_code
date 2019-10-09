@@ -1,11 +1,12 @@
 class FavesController < ApplicationController
   before_action :set_deck, except: [:index]
+  before_action :set_fave, only: [:destroy]
   before_action :authorize_request
 
   # GET /faves
   def index
     @faves = @current_user.faves
-
+    puts @faves
     render json: @faves
   end
 
@@ -23,8 +24,8 @@ class FavesController < ApplicationController
     end
   end
 
-  # DELETE /faves/1
-  def destroy
+  # DELETE /decks/:deck_id/faves/:id
+  def delete
     @fave.destroy
   end
 
@@ -32,6 +33,10 @@ class FavesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_deck
       @deck = Deck.find(params[:deck_id])
+    end
+
+    def set_fave 
+      @fave = Fave.where(user_id: @current_user.id, deck_id: params[:deck_id])
     end
 
     # Only allow a trusted parameter "white list" through.

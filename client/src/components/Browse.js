@@ -9,7 +9,7 @@ export default function Browse(props) {
       <div className="browse-container">
         {props.decks.map( deck => {
           return (
-            <Link to={`decks/${deck.id}/cards`} className="card-link" >
+            <Link to={`decks/${deck.id}/cards`} key={deck.id} className="card-link" >
               <div key={deck.id} className="browse-deck-div" style={{backgroundImage: `url(${deck.img})`, backgroundSize: 'cover'}}></div>
             </Link>
           )

@@ -69,6 +69,14 @@ export const showFaves = async () => {
   }
 }
 
+export const deleteFave = async (deckId) => {
+  try {
+    await api.delete(`/decks/${deckId}/faves`)
+  } catch (e) {
+    return e.message;
+  }
+}
+
 /************************* USER API CALLS ***********************/
 
 export const loginUser = async (loginData) => {

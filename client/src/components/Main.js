@@ -6,6 +6,7 @@ import AllDecks from './AllDecks';
 import SingleDeck from './SingleDeck';
 import NewCardForm from './NewCardForm';
 import UserDecks from './UserDecks';
+import ScrollToTop from './ScrollToTop';
 import { Route, Switch } from 'react-router-dom';
 
 export default function Main(props) {
@@ -50,8 +51,10 @@ export default function Main(props) {
         <Route path="/my-decks" render={()=>(
           <UserDecks
             decks={props.decks}
-            faves={props.faves}
-            handleAddFave={props.handleAddFave} />
+            currentUser={props.currentUser}
+            handleAddFave={props.handleAddFave} 
+            handleDeleteFave={props.handleDeleteFave}
+            />
         )} />
         <Route exact path="/decks/:id/cards" render={(routerProps)=>(
           <SingleDeck 
@@ -64,7 +67,9 @@ export default function Main(props) {
         <Route path="/decks" render={()=>(
           <AllDecks 
             decks={props.decks}
-            handleAddFave={props.handleAddFave} />
+            currentUser={props.currentUser}
+            handleAddFave={props.handleAddFave}
+            handleDeleteFave={props.handleDeleteFave} />
         )} />
         <Route path="/" render={()=>(
           <Home 

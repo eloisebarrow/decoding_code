@@ -59,7 +59,6 @@ export default function SingleDeck(props) {
             <p>next</p>
           </div>
         </div>
-        
       </div>
     </div>
   )

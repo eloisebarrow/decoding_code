@@ -13,7 +13,8 @@ import {
   registerUser,
   verifyUser,
   createFave,
-  showFaves
+  showFaves,
+  deleteFave
  } from './services/api-helper.js';
  import { withRouter } from 'react-router-dom'; 
 
@@ -24,7 +25,6 @@ class App extends React.Component {
       decks: [],
       cards: [],
       currentUser: null,
-      faves: [],
       loginFormData: {
         first_name: '',
         last_name: '',
@@ -135,6 +135,7 @@ class App extends React.Component {
   }
 
   /********************** API FUNCTIONS *****************************/
+
   allDecks = async () => {
     const decks = await getDecks();
     this.setState({
@@ -180,22 +181,25 @@ class App extends React.Component {
   }
 
   handleAddFave = async (deckId, e) => {
-    e.preventDefault()
+    // e.preventDefault()
     const parsedDeckId = parseInt(deckId)
     const card = await createFave(this.state.currentUser.id, parsedDeckId)
     return card;
   }
 
   showFaves = async () => {
-    console.log('handleShowFaves')
     const faves = await showFaves();
-    this.setState( prevState => ({
-      faves: [
-        ...prevState.faves,
-        faves
-      ]
-    }))
+    this.setState({
+      faves
+    })
   }
+
+  handleDeleteFave = async (deckId) => {
+    // e.preventDefault();
+    await deleteFave(deckId)
+  }
+
+  /********************** REACT LIFECYCLE METHODS *****************************/
 
   componentDidMount = async () => {
     this.allDecks();
@@ -214,6 +218,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log('this is currentUser', this.state.currentUser)
     return (
       <div className="App">
         <Header 
@@ -231,7 +236,7 @@ class App extends React.Component {
           handleDeleteCard={this.handleDeleteCard}
           handleUpdateCard={this.handleUpdateCard}
           handleUpdateForm={this.handleUpdateForm}
-          faves={this.state.faves}
+          handleDeleteFave={this.handleDeleteFave}
           error={this.state.error}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister}

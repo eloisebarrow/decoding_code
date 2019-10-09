@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Favorite from './Favorite';
 
 export default function AllDecks(props) {
+  console.log(props)
   return (
     <div>
       <h1>All Decks</h1>
@@ -17,7 +18,9 @@ export default function AllDecks(props) {
                 className="deck-div" 
                 style={{backgroundImage: `url(${deck.img})`, backgroundSize: 'cover'}}>
                 <Favorite 
+                  currentUser={props.currentUser}
                   handleAddFave={props.handleAddFave}
+                  handleDeleteFave={props.handleDeleteFave}
                   deckId={deck.id} />
               </div>
             </Link>

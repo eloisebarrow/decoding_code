@@ -9,7 +9,7 @@ export default function Header(props) {
       <Link to="/" className="title"><h1>De/Coding Code</h1></Link>
       <nav className="header-nav">
         <Link to="/decks">Topics
-          <ul className="header-topics">
+          {/* <ul className="header-topics">
             <Link to="#"><li>General Programming</li></Link>
             <Link to="#"><li>HTML</li></Link>
             <Link to="#"><li>CSS</li></Link>
@@ -20,7 +20,7 @@ export default function Header(props) {
             <Link to="#"><li>Node.js</li></Link>
             <Link to="#"><li>SQL</li></Link>
             <Link to="#"><li>Git and Github</li></Link>
-          </ul>
+          </ul> */}
         </Link>
         { props.currentUser ? 
           <>
