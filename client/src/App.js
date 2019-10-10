@@ -225,8 +225,9 @@ class App extends React.Component {
 
   /******************************** FAVES FUNCTIONS ***********************************/
 
-  handleAddFave = async (deckId, e) => {
-    // e.preventDefault()
+  handleAddFave = async (e, deckId) => {
+    console.log('deckId:', deckId)
+    e.preventDefault()
     const parsedDeckId = parseInt(deckId)
     const card = await createFave(this.state.currentUser.id, parsedDeckId)
     return card;
@@ -239,9 +240,9 @@ class App extends React.Component {
     })
   }
 
-  handleDeleteFave = async (deckId) => {
-    // e.preventDefault();
-    await deleteFave(deckId)
+  handleDeleteFave = async (e, deckId, faveId) => {
+    e.preventDefault();
+    await deleteFave(deckId, faveId)
   }
 
   /********************** REACT LIFECYCLE METHODS *****************************/
@@ -260,6 +261,7 @@ class App extends React.Component {
       }))
     }
     this.showFaves();
+    console.log()
   }
 
   render() {

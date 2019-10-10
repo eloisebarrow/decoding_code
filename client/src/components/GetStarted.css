@@ -2,12 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* width: 300px; */
   margin: 0 3%;
-}
-
-.sub-headline {
-  /* flex: 1; */
 }
 
 .example-card {
@@ -27,4 +22,22 @@
   padding: 3% 6%;
   background: #000000;
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 600px) {
+  .get-started-container {
+    flex-direction: row;
+    width: 1400px;
+    margin: 2% 0;
+  }
+
+  .example-card {
+    padding: 3% 11% 3% 11%;
+  }
+
+  .sub-headline {
+    width: 24%;
+    margin: 3%;
+    line-height: 2rem;
+  }
 }
