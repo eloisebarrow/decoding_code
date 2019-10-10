@@ -44,13 +44,25 @@ class App extends React.Component {
 
   /********************** GENERAL FORM FUNCTIONS *******************************/
 
-  clearForm = () => {
+  clearLoginForm = () => {
     this.setState({
       loginFormData: {
         first_name: '',
         last_name: '',
         email: '',
         password: '',
+      }
+    })
+  }
+
+  clearCardForm = () => {
+    this.setState({
+      newCardFormData: {
+        deck_id: '',
+        prompt: '',
+        answer: '',
+        is_public: false,
+        user_id: null,
       }
     })
   }
@@ -77,13 +89,13 @@ class App extends React.Component {
     const currentUser = await loginUser(this.state.loginFormData)
     if (currentUser.error) {
       this.handleLoginError();
-      this.clearForm();
+      this.clearLoginForm();
     } else {
       this.setState({
         currentUser,
         error: ''
       });
-      this.clearForm();
+      this.clearLoginForm();
       this.props.history.push('/my-decks');
     }
   }
@@ -94,12 +106,12 @@ class App extends React.Component {
       this.setState({
         error: 'Invalid Credentials'
       })
-      this.clearForm();
+      this.clearLoginForm();
     } else {
       this.setState({
         currentUser
       });
-      this.clearForm();
+      this.clearLoginForm();
       this.props.history.push('/my-decks')
     }
   }
@@ -115,7 +127,6 @@ class App extends React.Component {
 
   handleNewCardFormChange = (e) => {
     const { name, value } = e.target;
-
     this.setState( prevState => ({
       newCardFormData: {
         ...prevState.newCardFormData,
@@ -128,7 +139,6 @@ class App extends React.Component {
     e.preventDefault();
     const cardData = this.state.cards.find( card => card.id === cardId );
     const { created_at, updated_at, id, ...card } = cardData;
-    console.log('cardData:', cardData, 'cardId:', cardId)
     this.props.history.push(`/update-card/${cardId}`)
     this.setState({
       newCardFormData: card
@@ -153,14 +163,29 @@ class App extends React.Component {
 
   handleNewCard = async () => {
     const newCard = await createCard(this.state.newCardFormData);
-    this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`)
+    if (newCard) {  
+      this.setState( prevState => ({
+        cards: [
+          ...prevState.cards,
+          newCard
+        ]
+      }))
+      this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`)
+    } else {
+      return newCard.error
+    }
     return newCard;
   }
 
   handleUpdateCard = async (e, updateCardId) => {
     e.preventDefault();
-    await updateCard(this.state.newCardFormData, updateCardId);
-    this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`);    
+    const updatedCard = await updateCard(this.state.newCardFormData, updateCardId);
+    if (updatedCard) {
+      //then change state
+      this.clearCardForm()
+      this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`); 
+    }
+    return updatedCard;
   }
 
   handleDeleteCard = async (deleteCardId, e) => {

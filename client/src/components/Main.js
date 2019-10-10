@@ -6,7 +6,6 @@ import AllDecks from './AllDecks';
 import SingleDeck from './SingleDeck';
 import NewCardForm from './NewCardForm';
 import UserDecks from './UserDecks';
-import ScrollToTop from './ScrollToTop';
 import { Route, Switch } from 'react-router-dom';
 
 export default function Main(props) {

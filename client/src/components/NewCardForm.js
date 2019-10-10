@@ -27,6 +27,7 @@ export default function NewCardForm(props) {
                 <option 
                   key={deck.id}
                   value={deck.id}
+                  selected={props.newCardFormData.deck_id === deck.id}
                   >
                 {deck.topic}
                 </option>

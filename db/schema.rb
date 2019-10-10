@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_210136) do
+ActiveRecord::Schema.define(version: 2019_10_10_135528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
-    t.string "prompt"
-    t.string "answer"
+    t.string "prompt", null: false
+    t.string "answer", null: false
     t.boolean "is_public"
     t.bigint "deck_id", null: false
     t.datetime "created_at", precision: 6, null: false
