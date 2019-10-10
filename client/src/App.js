@@ -115,6 +115,7 @@ class App extends React.Component {
 
   handleNewCardFormChange = (e) => {
     const { name, value } = e.target;
+
     this.setState( prevState => ({
       newCardFormData: {
         ...prevState.newCardFormData,
@@ -127,6 +128,7 @@ class App extends React.Component {
     e.preventDefault();
     const cardData = this.state.cards.find( card => card.id === cardId );
     const { created_at, updated_at, id, ...card } = cardData;
+    console.log('cardData:', cardData, 'cardId:', cardId)
     this.props.history.push(`/update-card/${cardId}`)
     this.setState({
       newCardFormData: card
@@ -150,8 +152,8 @@ class App extends React.Component {
   }
 
   handleNewCard = async () => {
-    console.log(this.state.newCardFormData)
     const newCard = await createCard(this.state.newCardFormData);
+    this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`)
     return newCard;
   }
 
@@ -217,7 +219,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('this is currentUser', this.state.currentUser)
     return (
       <div className="App">
         <Header 

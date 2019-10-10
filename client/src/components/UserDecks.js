@@ -26,9 +26,8 @@ export default function UserDecks(props) {
       <h1>User Decks</h1>
       {props.currentUser && props.currentUser.faves.map( deck => {
           return (
-            <Link to={`/decks/${deck.id}/cards`}>
-              <div 
-                key={deck.id} 
+            <Link to={`/decks/${deck.id}/cards`} key={deck.id}>
+              <div  
                 className="deck-div" 
                 style={{backgroundImage: `url(${deck.img})`, backgroundSize: 'cover'}}>
                 <Favorite 

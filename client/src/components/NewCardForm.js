@@ -26,7 +26,7 @@ export default function NewCardForm(props) {
               return (
                 <option 
                   key={deck.id}
-                  value={index + 1}
+                  value={deck.id}
                   >
                 {deck.topic}
                 </option>
