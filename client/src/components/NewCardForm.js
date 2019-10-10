@@ -55,9 +55,12 @@ export default function NewCardForm(props) {
             placeholder="Response">
           </input>
         </section>
+        
+        <p className="error-message">{props.error}</p>
 
         <button type="submit" className="submit-button">Submit</button>
       </form>
+      
     </div>
   )
 }

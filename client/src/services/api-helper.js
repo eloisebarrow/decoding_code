@@ -10,7 +10,7 @@ export const getDecks = async () => {
     const resp = await api.get('/decks');
     return resp.data;
   } catch (e) {
-    return e.message
+    return { error: e.message };
   }
 };
 
@@ -19,7 +19,7 @@ export const getCards = async () => {
     const resp = await api.get('/cards');
     return resp.data;
   } catch (e) {
-    return e.message
+    return { error: e.message };
   }
 };
 
@@ -28,7 +28,7 @@ export const createCard = async (newCardData) => {
     const resp = await api.post('/cards', { card: newCardData })
     return resp.data;
   } catch (e) {
-    return e.message
+    return { error: e.message };
   }
 }
 
@@ -37,7 +37,7 @@ export const updateCard = async (updateCardData, cardId) => {
     const resp = await api.put(`/cards/${cardId}`, { card: updateCardData, cardId })
     return resp.data;
   } catch (e) {
-    return e.message
+    return { error: e.message };
   }
 }
 
@@ -45,7 +45,7 @@ export const deleteCard = async (cardId) => {
   try {
     await api.delete(`/cards/${cardId}`)
   } catch (e) {
-    return e.message;
+    return { error: e.message };
   }
 }
 
@@ -56,7 +56,7 @@ export const createFave = async (userId, deckId) => {
     const newFave = await api.post(`/decks/${deckId}/faves`, userId, deckId)
     return newFave;
   } catch (e) {
-    return e.message
+    return { error: e.message };
   }  
 }
 
@@ -65,7 +65,7 @@ export const showFaves = async () => {
     const resp = await api.get('/faves')
     return resp.data;
   } catch (e) {
-    return e.message;
+    return { error: e.message };
   }
 }
 
@@ -73,7 +73,7 @@ export const deleteFave = async (deckId) => {
   try {
     await api.delete(`/decks/${deckId}/faves`)
   } catch (e) {
-    return e.message;
+    return { error: e.message };
   }
 }
 
@@ -111,6 +111,6 @@ export const verifyUser = async () => {
     } 
     return false;
   } catch (e) {
-    return e.message
+    return { error: e.message };
   }
 }

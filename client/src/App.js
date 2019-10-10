@@ -170,7 +170,9 @@ class App extends React.Component {
 
   handleNewCard = async () => {
     const newCard = await createCard(this.state.newCardFormData);
-    if (newCard) {  
+    if (newCard.error) {
+      this.handleCardFormError();
+    } else if (newCard) {  
       this.setState( prevState => ({
         cards: [
           ...prevState.cards, 
@@ -178,18 +180,18 @@ class App extends React.Component {
         ],
         error: ''
       }))
-      this.clearCardForm()
       this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`);
-      return newCard;
-    } else {
-      this.handleCardFormError();
+      this.clearCardForm()
     } 
+    return newCard;
   }
 
   handleUpdateCard = async (e, updateCardId) => {
     e.preventDefault();
     const updatedCard = await updateCard(this.state.newCardFormData, updateCardId);
-    if (updatedCard) {
+    if (updatedCard.error) {
+      this.handleCardFormError();
+    } else if (updatedCard) {
       this.setState( prevState => ({
         cards: [
           ...prevState.cards, 
@@ -197,12 +199,9 @@ class App extends React.Component {
         ],
         error: ''
       }))
-      this.clearCardForm();
-      this.forceUpdate();
-      this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`); 
-      
-    } else {
-      this.handleCardFormError();
+      // this.forceUpdate();
+      this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`);
+      this.clearCardForm();    
     }
     return updatedCard;
   }
@@ -210,7 +209,6 @@ class App extends React.Component {
   handleDeleteCard = async (deleteCardId, e) => {
     e.preventDefault();
     await deleteCard(deleteCardId)
-    console.log(deleteCardId)
     this.setState(prevState => ({
       cards: prevState.cards.filter((card) => card.id !== deleteCardId),
       decks: prevState.decks.map((deck) => {
@@ -224,6 +222,8 @@ class App extends React.Component {
     }))
     this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`)
   }
+
+  /******************************** FAVES FUNCTIONS ***********************************/
 
   handleAddFave = async (deckId, e) => {
     // e.preventDefault()

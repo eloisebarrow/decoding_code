@@ -34,6 +34,7 @@ export default function Main(props) {
           <NewCardForm 
             title={"new"}
             decks={props.decks}
+            error={props.error}
             newCardFormData={props.newCardFormData}
             handleNewCardFormChange={props.handleNewCardFormChange}
             handleNewCard={props.handleNewCard} />
@@ -43,6 +44,7 @@ export default function Main(props) {
             {...routerProps}
             title={"update"}
             decks={props.decks}
+            error={props.error}
             newCardFormData={props.newCardFormData}
             handleNewCardFormChange={props.handleNewCardFormChange}
             handleUpdateCard={props.handleUpdateCard} />
