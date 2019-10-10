@@ -73,6 +73,12 @@ class App extends React.Component {
     })
   }
 
+  handleCardFormError = () => {
+    this.setState({
+      error: "Uh oh, missing info. Try again."
+    })
+  }
+
   /************************** LOGIN FORM FUNCTIONS **************************/
 
   handleLoginFormChange = (e) => {
@@ -109,7 +115,8 @@ class App extends React.Component {
       this.clearLoginForm();
     } else {
       this.setState({
-        currentUser
+        currentUser,
+        error: ''
       });
       this.clearLoginForm();
       this.props.history.push('/my-decks')
@@ -166,24 +173,36 @@ class App extends React.Component {
     if (newCard) {  
       this.setState( prevState => ({
         cards: [
-          ...prevState.cards,
+          ...prevState.cards, 
           newCard
-        ]
+        ],
+        error: ''
       }))
-      this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`)
+      this.clearCardForm()
+      this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`);
+      return newCard;
     } else {
-      return newCard.error
-    }
-    return newCard;
+      this.handleCardFormError();
+    } 
   }
 
   handleUpdateCard = async (e, updateCardId) => {
     e.preventDefault();
     const updatedCard = await updateCard(this.state.newCardFormData, updateCardId);
     if (updatedCard) {
-      //then change state
-      this.clearCardForm()
+      this.setState( prevState => ({
+        cards: [
+          ...prevState.cards, 
+          updatedCard
+        ],
+        error: ''
+      }))
+      this.clearCardForm();
+      this.forceUpdate();
       this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`); 
+      
+    } else {
+      this.handleCardFormError();
     }
     return updatedCard;
   }
