@@ -21,8 +21,8 @@ export default function Footer(props) {
         <div>
           <h4>Help</h4>
           <ul>
-            <Link to="/login"><li>Login</li></Link>
-            <Link to="/register"><li>Sign Up</li></Link>
+            <Link to={props.currentUser ? '/my-decks' : '/login'}><li>Login</li></Link>
+            <Link to={props.currentUser ? '/my-decks' : '/login'}><li>Sign Up</li></Link>
           </ul>
         </div>
 

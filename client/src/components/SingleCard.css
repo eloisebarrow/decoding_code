@@ -9,6 +9,10 @@
   justify-content: center;
 }
 
+/* .answer-card:hover {
+  transform: rotate3d(1,2,1);
+} */
+
 .answer-card {
   background-image: url('./../images/flashcard.png');
   background-size: contain;
@@ -17,6 +21,21 @@
   justify-content: center;
   align-items: center;
 } 
+/* 
+.prompt-card {
+  transform: rotateX(30deg);
+  animation: one 2s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes .prompt-card {
+  0% {
+    transform: rotateX(0);
+  }
+  100% {
+    transform: rotateX(100deg);
+  }
+} */
 
 .prompt-text {
   padding: 0 2%;

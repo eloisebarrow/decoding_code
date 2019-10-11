@@ -1,0 +1,98 @@
+* {
+  outline: none !important;
+}
+
+/* burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 51px;
+  height: 38px;
+  right: 20px;
+  top: 13px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #000000;
+  transition: ease .3s;
+  height: 14%;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #000000;
+}
+
+/************************* SIDEBAR WRAPPER *********************/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background-color: rgba(251, 229, 85, 0.8);
+  padding-top: 2.5em; 
+  padding-left: 1em;
+  font-size: 1.15em;
+  padding-top: 25%;
+  margin-top: -25%;
+}
+
+.ul-test {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+li.menu-item {
+  list-style: none;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  left: 8px;
+  height: 30px;
+  width: 35px;
+  top: 31px;
+}
+
+.bm-cross-button button {
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  color: #000000;
+  text-decoration: none;
+  line-height: 2rem;
+  text-align: center;
+  transition: ease .4s;
+  font-weight: bold;
+}
+
+/* Individual item hover */
+.bm-item:hover {
+  color: rgb(42, 26, 94);
+  transform: scale3d(1.1, 1.1, 1.1);
+  border-bottom: 1px solid black;
+}
+
+@media screen and (min-width: 600px) {
+  .bm-burger-button {
+    position: fixed;
+    width: 35px;
+    height: 30px;
+    right: 15px;
+    top: 13px;
+  }
+}
