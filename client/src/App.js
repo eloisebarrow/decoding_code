@@ -247,10 +247,10 @@ class App extends React.Component {
     })
   }
 
-  handleDeleteFave = async (e, deckId) => {
+  handleDeleteFave = async (e, deckId, faveId) => {
     console.log('fave deleted')
     e.preventDefault();
-    await deleteFave(deckId)
+    await deleteFave(deckId, faveId)
   }
 
   /********************** REACT LIFECYCLE METHODS *****************************/

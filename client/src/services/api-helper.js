@@ -69,9 +69,9 @@ export const showFaves = async () => {
   }
 }
 
-export const deleteFave = async (deckId) => {
+export const deleteFave = async (deckId, faveId) => {
   try {
-    await api.delete(`/decks/${deckId}/faves`) // /${faveId}
+    await api.delete(`/decks/${deckId}/faves/${faveId}`) // /${faveId}
   } catch (e) {
     return { error: e.message };
   }

@@ -35,8 +35,7 @@ class FavesController < ApplicationController
     end
 
     def set_fave 
-      puts @current_user
-      @fave = Fave.where(user_id: @current_user.id, deck_id: params[:deck_id])
+      @fave = Fave.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

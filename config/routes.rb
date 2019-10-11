@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :cards
   resources :decks do
     post '/faves', to: 'faves#create'
-    delete '/faves', to: 'faves#destroy' 
+    delete '/faves/:id', to: 'faves#destroy' 
   end
   resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
