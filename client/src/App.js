@@ -297,7 +297,8 @@ class App extends React.Component {
           handleNewCard={this.handleNewCard}
         />
         <Footer 
-          decks={this.state.decks} />
+          decks={this.state.decks}
+          currentUser={this.state.currentUser} />
       </div>
     );
   }
