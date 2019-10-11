@@ -6,12 +6,12 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users.get_faves
+    render json: @users.with_faves
   end
 
   # GET /users/1
   def show
-    render json: @user.get_faves
+    render json: @user.with_faves
   end
 
   # POST /users
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
     if @user.save
       token = encode(user_id: @user.id, email: @user.email, first_name: @user.first_name, last_name: @user.last_name)
-      render json: { user: @user.get_faves, token: token }, status: :ok
+      render json: { user: @user.with_faves, token: token }, status: :ok
     else
       render json: @user.errors, status: :unprocessable_entity
     end
