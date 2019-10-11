@@ -23,7 +23,7 @@ export default function SingleDeck(props) {
       <div className="single-card-container">
         <div className="prompts-container">
           <h3>Click a prompt to start studying!</h3>
-          <ol>
+          <ol className="prompts-list">
             {deck.cards.map( (card, index) => {
               if (card.is_public || (props.currentUser && card.user_id === props.currentUser.id)) {
                 return (
@@ -32,18 +32,20 @@ export default function SingleDeck(props) {
                     onClick={()=>{
                       setCurrentCard(index);
                       setIsCardClicked(false) }}>
-                    <li>
+                    <li className={!card.is_public ? 'single-prompt-container li-spacing' : null }>
                       {card.prompt} 
-                      {!card.is_public && 
-                        (<><button onClick={(e)=>{props.handleUpdateForm(e, card.id)}}>Edit</button> 
-                        <button onClick={(e)=>{props.handleDeleteCard(card.id, e)}}>Delete</button></>)}
+                      <section className="prompt-buttons">
+                        {!card.is_public && 
+                          (<><button className="user-card-button" onClick={(e)=>{props.handleUpdateForm(e, card.id)}}>Edit</button> 
+                          <button className="user-card-button" onClick={(e)=>{props.handleDeleteCard(card.id, e)}}>Delete</button></>)}
+                      </section>
                     </li>
                   </Link>
                 )
               }
               })
             }
-            <Link to={props.currentUser ? '/new-card' : '/login'}><li>Create your own!</li></Link>
+            <Link to={props.currentUser ? '/new-card' : '/login'}><li className="create-your-own">...Or create your own!</li></Link>
           </ol>
         </div>
 

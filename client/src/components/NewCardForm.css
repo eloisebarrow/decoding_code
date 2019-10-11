@@ -9,6 +9,14 @@
   margin: 0 auto;
 }
 
+.new-card-form select {
+  font-size: 1rem;
+  padding: 4%;
+  font-weight: 600;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
 .new-card-form button {
   margin-top: 8%;
   font-size: 1.25rem;
@@ -27,4 +35,12 @@
   padding: 22% 8%;
   margin-top: 8%;
   text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .new-card-form select {
+    font-size: 1rem;
+    padding: 4%;
+    font-weight: 600;
+  }
 }

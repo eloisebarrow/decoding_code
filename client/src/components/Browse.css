@@ -14,3 +14,19 @@
 .browse-button {
   margin: 3% 0;
 }
+
+@media screen and (min-width: 600px) {
+  .browse-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .browse-deck-div {
+    margin-bottom: 9%;
+  }
+
+  .all-decks-button {
+    padding: 1.5% 6%;
+    font-size: 0.9rem;
+  }
+}

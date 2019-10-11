@@ -1,19 +1,48 @@
-.title {
-  font-family: 'Anonymous Pro', monospace;
-  color: #000000;
-  font-size: 0.7rem;
-}
-
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #fbe555;
   margin: 0;
   padding: 0 2%;
+  position: relative;
+}
+
+.mobile-container {
+  display: flex;
+}
+
+.title {
+  font-family: 'Anonymous Pro', monospace;
+  color: #000000;
+  font-size: 0.9rem;
+  position: absolute;
+  margin-left: 24%;
+}
+
+.hamburger-container {
+  display: block;
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background-color: #fbe555;
+  border: none;
+}
+
+.hamburger-lines {
+  border: 2px solid black;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 13% auto;
+  background-color: black;
+  border-radius: 20%;
 }
 
 .header-nav {
-  display: flex;
+  display: none;
+  /* display: flex; */
   align-items: center;
   width: 50%;
   justify-content: space-around;
@@ -27,9 +56,15 @@
   margin-left: 6%;
 }
 
+.menu-item {
+  font-size: 1.6rem;
+  margin: 15%;
+}
+
 @media screen and (min-width: 600px) {
   .title {
     font-size: 1.15rem;
+    margin-left: 36%;
   }
 
   .header-nav {
@@ -39,4 +74,5 @@
   .header-nav a {
     font-size: 1.15rem;
   }
+
 }

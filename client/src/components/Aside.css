@@ -9,8 +9,15 @@
   color: #FFFFFF;
   position: absolute;
   bottom: 0;
+  margin-bottom: 1%;
 }
 
 .aside-container a {
   color: rgb(242, 131, 92);
+}
+
+@media screen and (min-width: 600px) {
+  .aside-container {
+    display: none;
+  }
 }

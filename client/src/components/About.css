@@ -11,14 +11,15 @@
 .about-container h2 {
   font-size: 1.4rem;
   width: 245px;
-  padding: 16% 0 0 2%;
+  padding: 9% 0 0 2%;
   line-height: 31px;
 }
 
 .about-container h3 {
   font-size: 1.2rem;
   width: 174px;
-  padding: 2% 0 0 14%;
+  padding: 8% 0 0 48%;
+  color: #000000;
 }
 
 .all-decks-button {
@@ -34,7 +35,7 @@
 }
 
 .about-button {
-  margin: 3% 4% 0 0;
+  margin: 1% 4% 0 0;
 }
 
 @media screen and (min-width: 600px) {
