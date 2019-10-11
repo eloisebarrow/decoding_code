@@ -63,7 +63,6 @@ li.menu-item {
   left: 0;
 }
 
-
 /* Wrapper for item list */
 .bm-item-list {
   color: #b8b7ad;
@@ -84,7 +83,10 @@ li.menu-item {
 .bm-item:hover {
   color: rgb(42, 26, 94);
   transform: scale3d(1.1, 1.1, 1.1);
-  border-bottom: 1px solid black;
+}
+
+.bm-overlay {
+  background: rgba(0,0,0,0);
 }
 
 @media screen and (min-width: 600px) {

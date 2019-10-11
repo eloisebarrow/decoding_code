@@ -251,6 +251,9 @@ class App extends React.Component {
     console.log('fave deleted')
     e.preventDefault();
     await deleteFave(deckId, faveId)
+    // this.setState(prevState => ({
+    //   currentUser: prevState.currentUser.faves.filter((fave) => fave.id !== faveId),
+    // }))
   }
 
   /********************** REACT LIFECYCLE METHODS *****************************/

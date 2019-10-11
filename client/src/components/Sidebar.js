@@ -14,13 +14,13 @@ export default function Sidebar(props) {
         { props.currentUser ? 
           <ul className="bm-item-list ul-test">    
             <li className="menu-item"><Link to="/my-decks">My Decks</Link></li>
-            <br/>
+
             <li className="menu-item"><Link to="/login" onClick={props.handleLogout} id="logout" className="menu-item">Sign Out</Link></li>
           </ul>
           :
           <ul className="bm-item-list ul-test">
             <li className="menu-item"><Link to="/login">Login</Link></li>
-            <br/>
+   
             <li className="menu-item"><Link to="/register">Sign Up</Link></li>
           </ul>  
         }
