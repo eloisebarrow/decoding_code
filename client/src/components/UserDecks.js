@@ -5,60 +5,27 @@ import Favorite from './Favorite';
 
 export default function UserDecks(props) {
 
-  // const userFaves = props.decks.filter( deck => {
-  //   // console.log('this is deck from filter', deck)
-  //   props.faves.includes(deck.id)}).map( deck => {
-  //   return (
-  //     <Link to={`/decks/${deck.id}/cards`} key={deck.id} >
-  //       <div 
-  //         className="deck-div" 
-  //         style={{backgroundImage: `url(${deck.img})`, backgroundSize: 'cover'}}>
-  //         <Favorite 
-  //           handleAddFave={props.handleAddFave}
-  //           deckId={deck.id} />
-  //       </div>
-  //     </Link>
-  //   )
-  // }) 
-
   return (
     <div>
-      <h1>User Decks</h1>
-      {props.currentUser && props.currentUser.faves.map( deck => {
-          return (
-            <Link to={`/decks/${deck.id}/cards`} key={deck.id}>
-              <div  
-                className="deck-div" 
-                style={{backgroundImage: `url(${deck.img})`, backgroundSize: 'cover'}}>
-                <Favorite 
-                  faves={props.faves}
-                  handleAddFave={props.handleAddFave}
-                  handleDeleteFave={props.handleDeleteFave}
-                  deckId={deck.id} />
-              </div>
-            </Link>
-          )
-        })}
+      <h1>Saved Decks</h1>
+      <section className="faves-container">
+        {props && props.currentUser && props.currentUser.faves.map( fave => {
+            return (
+              <Link to={`/decks/${fave.deck_id}/cards`} key={fave.id} className="deck-link">
+                <div  
+                  className="deck-div" 
+                  style={{backgroundImage: `url(${fave.deck.img})`, backgroundSize: 'cover'}}>
+                  <Favorite 
+                    currentUser={props.currentUser}
+                    handleAddFave={props.handleAddFave}
+                    handleDeleteFave={props.handleDeleteFave}
+                    deckId={fave.deck_id}
+                    faveId={fave.id} />
+                </div>
+              </Link>
+            )
+          })}
+      </section>
     </div>
   )
 }
-
-// { props.faves.forEach( fave => {
-//   // console.log('this is fave from forEach', fave)
-//     props.decks.map( deck => {
-//       // console.log('this is deck from map', deck)
-//       if (fave.deck_id === deck.id) {
-//         return (
-//           <Link to={`/decks/${deck.id}/cards`} key={deck.id} >
-//             <div 
-//               className="deck-div" 
-//               style={{backgroundImage: `url(${deck.img})`, backgroundSize: 'cover'}}>
-//               <Favorite 
-//                 handleAddFave={props.handleAddFave}
-//                 deckId={deck.id} />
-//             </div>
-//           </Link>
-//         )
-//       }
-//     })
-// }) }

@@ -5,6 +5,7 @@
   width: 100%;
   color: #FFFFFF;
   overflow: hidden;
+  /* margin: 0; */
 }
 
 .about-container h2 {
@@ -39,6 +40,8 @@
 @media screen and (min-width: 600px) {
   .about-container {
     width: 100vw;
+    height: 50%;
+    /* margin-left: -14rem; */
   }
 
   .about-container h2 {

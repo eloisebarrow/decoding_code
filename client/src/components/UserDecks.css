@@ -1,5 +1,9 @@
-.fave-container {
-  border: 1px solid black;
-  width: 200px;
-  height: 200px;
+.faves-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.deck-link {
+  margin: 1%;
 }

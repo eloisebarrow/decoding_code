@@ -178,6 +178,12 @@ class App extends React.Component {
           ...prevState.cards, 
           newCard
         ],
+        decks: prevState.decks.map((deck) => {
+          return {
+              ...deck,
+              cards: newCard.deck_id === deck.id ? deck.cards.concat([newCard]) : deck.cards
+          } 
+        }),
         error: ''
       }))
       this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`);
@@ -193,13 +199,15 @@ class App extends React.Component {
       this.handleCardFormError();
     } else if (updatedCard) {
       this.setState( prevState => ({
-        cards: [
-          ...prevState.cards, 
-          updatedCard
-        ],
+        cards: prevState.cards.map( card => card.id === updatedCard.id ? updatedCard : card),
+        decks: prevState.decks.map((deck) => {
+          return {
+              ...deck,
+              cards: deck.cards.map( card => card.id === updatedCard.id ? updatedCard : card)
+          } 
+        }),
         error: ''
       }))
-      // this.forceUpdate();
       this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`);
       this.clearCardForm();    
     }
@@ -220,13 +228,12 @@ class App extends React.Component {
         } 
       })
     }))
-    this.props.history.push(`/decks/${this.state.newCardFormData.deck_id}/cards`)
   }
 
   /******************************** FAVES FUNCTIONS ***********************************/
 
   handleAddFave = async (e, deckId) => {
-    console.log('deckId:', deckId)
+    console.log('fave added')
     e.preventDefault()
     const parsedDeckId = parseInt(deckId)
     const card = await createFave(this.state.currentUser.id, parsedDeckId)
@@ -240,9 +247,10 @@ class App extends React.Component {
     })
   }
 
-  handleDeleteFave = async (e, deckId, faveId) => {
+  handleDeleteFave = async (e, deckId) => {
+    console.log('fave deleted')
     e.preventDefault();
-    await deleteFave(deckId, faveId)
+    await deleteFave(deckId)
   }
 
   /********************** REACT LIFECYCLE METHODS *****************************/

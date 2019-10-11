@@ -6,7 +6,6 @@ class FavesController < ApplicationController
   # GET /faves
   def index
     @faves = @current_user.faves
-    puts @faves
     render json: @faves
   end
 
@@ -24,8 +23,8 @@ class FavesController < ApplicationController
     end
   end
 
-  # DELETE /decks/:deck_id/faves/:id
-  def delete
+  # DELETE /decks/:deck_id/faves
+  def destroy
     @fave.destroy
   end
 
@@ -36,6 +35,7 @@ class FavesController < ApplicationController
     end
 
     def set_fave 
+      puts @current_user
       @fave = Fave.where(user_id: @current_user.id, deck_id: params[:deck_id])
     end
 

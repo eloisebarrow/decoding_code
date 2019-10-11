@@ -9,13 +9,7 @@ class User < ApplicationRecord
   has_many :faves, class_name: "Fave"
   has_many :cards
 
-  def get_faves
-    {
-      id: id,
-      first_name: first_name,
-      last_name: last_name,
-      email: email,
-      faves: faves.map { |fave| fave.deck }
-    }
+  def with_faves
+    self.to_json( include: { faves: { include: { deck: { only: :img } } } } ) # when method is called, include faves as an array with each deck as an array within faves
   end
 end

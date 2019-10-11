@@ -27,7 +27,6 @@
 @media screen and (min-width: 600px) {
   .get-started-container {
     flex-direction: row;
-    width: 1400px;
     margin: 2% 0;
   }
 
