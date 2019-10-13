@@ -9,7 +9,7 @@ export default function UserDecks(props) {
     <div>
       <h1>Saved Decks</h1>
       <section className="faves-container">
-        {props && props.currentUser && props.currentUser.faves.map( fave => {
+        {props.currentUser && props.currentUser.faves.map( fave => {
             return (
               <Link to={`/decks/${fave.deck_id}/cards`} key={fave.id} className="deck-link">
                 <div  

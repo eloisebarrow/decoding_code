@@ -280,7 +280,8 @@ class App extends React.Component {
       <div className="App">
         <Header 
           currentUser={this.state.currentUser}
-          handleLogout={this.handleLogout} />
+          handleLogout={this.handleLogout}
+          error={this.state.error} />
         <Main 
           decks={this.state.decks}
           cards={this.state.cards}

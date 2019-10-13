@@ -1,7 +1,7 @@
 const axios = require('axios');
 const api = axios.create({
-  // baseURL: 'http://localhost:3000' // development URL
-  baseURL: 'https://decoding-code.herokuapp.com' // PRODUCTIN 
+  baseURL: 'http://localhost:3000' // development URL
+  //baseURL: 'https://decoding-code.herokuapp.com' // PRODUCTION 
 })
 
 /************************* DECK/CARDS API CALLS ***********************/
@@ -72,7 +72,7 @@ export const showFaves = async () => {
 
 export const deleteFave = async (deckId, faveId) => {
   try {
-    await api.delete(`/decks/${deckId}/faves/${faveId}`) // /${faveId}
+    await api.delete(`/decks/${deckId}/faves/${faveId}`)
   } catch (e) {
     return { error: e.message };
   }

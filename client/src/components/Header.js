@@ -9,8 +9,9 @@ export default function Header(props) {
 
   return (
     <div className="header-container">
-      { props.currentUser && 
-          <h4 className="user-greeting">Hi, {props.currentUser.first_name}</h4>
+      { props.currentUser && !props.currentUser.error ? 
+          <h4 className="user-greeting">Hi, {props.currentUser.first_name}</h4> 
+          : null
       }
     <Link to="/" className="title"><h1>De/Coding Code</h1></Link>
     <Sidebar 
