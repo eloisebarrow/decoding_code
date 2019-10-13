@@ -4,9 +4,15 @@ import { fallDown as Menu } from 'react-burger-menu'
 import { Link } from 'react-router-dom';
 
 export default function Sidebar(props) {
+
   return (
     <div>
-      <Menu right>
+      <Menu 
+        right 
+        noOverlay 
+        disableAutoFocus
+        isOpen={props.menuOpen}
+         >
         <br/>
         <Link to="/" className="menu-item">Home</Link>
         <Link to="/decks" className="menu-item">Topics</Link>
@@ -20,7 +26,7 @@ export default function Sidebar(props) {
           :
           <ul className="bm-item-list ul-test">
             <li className="menu-item"><Link to="/login">Login</Link></li>
-   
+    
             <li className="menu-item"><Link to="/register">Sign Up</Link></li>
           </ul>  
         }

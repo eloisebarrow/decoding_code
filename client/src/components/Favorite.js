@@ -2,7 +2,6 @@ import React from 'react';
 import './Favorite.css';
 
 export default function Favorite(props) {
-  console.log('favorite props:', props)
   
   return (
     <div>

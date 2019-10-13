@@ -9,16 +9,10 @@
   height: 75px;
 }
 
-.mobile-container {
-  display: flex;
-}
-
 .title {
   font-family: 'Anonymous Pro', monospace;
   color: #000000;
   font-size: 0.9rem;
-  position: absolute;
-  margin-left: 24%;
 }
 
 .hamburger-container {
@@ -42,8 +36,7 @@
 }
 
 .header-nav {
-  display: none;
-  /* display: flex; */
+  display: flex;
   align-items: center;
   width: 50%;
   justify-content: space-around;
@@ -62,10 +55,25 @@
   margin: 15%;
 }
 
+.sign-out-btn, .sign-up-btn {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: 500;
+  border: none;
+}
+
+.sign-out-btn {
+  font-size: 1rem;
+  padding: 7% 23%;
+}
+
+.sign-up-btn {
+  padding: 2% 6%;
+}
+
 @media screen and (min-width: 600px) {
   .title {
     font-size: 1.15rem;
-    margin-left: 36%;
   }
 
   .header-nav {

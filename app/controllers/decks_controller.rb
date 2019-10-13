@@ -3,9 +3,9 @@ class DecksController < ApplicationController
 
   # GET /decks
   def index
-    @decks = Deck.all
+    @decks = Deck.all #.with_faves
 
-    render json: @decks, include: :cards
+    render json: @decks, include: :cards #,include: :faves
   end
 
   # GET /decks/1

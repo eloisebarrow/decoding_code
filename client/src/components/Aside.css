@@ -3,6 +3,8 @@
   background-size: cover;
   height: 50vh;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .aside-container h2 {
@@ -18,6 +20,11 @@
 
 @media screen and (min-width: 600px) {
   .aside-container {
-    display: none;
+    width: 100%;
+    height: 500px;
+  }
+
+  .aside-container h2 {
+    top: 0;
   }
 }

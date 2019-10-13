@@ -134,3 +134,7 @@ code example tbd
 **ERROR**: Can't register a user through front end but can through Insomnia. Getting error 422 'unprocessable entity'.
 
 **RESOLUTION**: Had to pass strong params to registerUser in api-helper - i.e. {user: registerData} instead of just registerData.
+
+**ERROR**: Couldn't add favorites initially, received errors related to an initial typo "fafe" which was corrected but continued to persist. Deleted and rebuilt backend but files still had references to typo "fafe".
+
+**RESOLUTION**: Rails created "fafe" internally during scaffolding - it read 'fafe' as singular for 'Faves'. Manually added to Users model: ```class_name: "Fave"```

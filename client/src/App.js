@@ -100,9 +100,11 @@ class App extends React.Component {
       this.setState({
         currentUser,
         error: ''
+      }, () => {
+        this.props.history.push('/');
       });
       this.clearLoginForm();
-      this.props.history.push('/my-decks');
+      
     }
   }
 
@@ -271,8 +273,7 @@ class App extends React.Component {
         }
       }))
     }
-    this.showFaves();
-    console.log()
+    // this.showFaves();
   }
 
   render() {

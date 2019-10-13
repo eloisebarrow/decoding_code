@@ -18,11 +18,12 @@ export default function AllDecks(props) {
                 key={deck.id} 
                 className="deck-div" 
                 style={{backgroundImage: `url(${deck.img})`, backgroundSize: 'cover'}}>
-                <Favorite 
+                {/* <Favorite 
                   currentUser={props.currentUser}
                   handleAddFave={props.handleAddFave}
                   handleDeleteFave={props.handleDeleteFave}
-                  deckId={deck.id} />
+                  deckId={deck.id}
+                   /> */}
               </div>
             </Link>
           )
