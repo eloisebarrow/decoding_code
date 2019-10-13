@@ -11,10 +11,7 @@
 
 .new-card-form select {
   font-size: 1rem;
-  padding: 4%;
   font-weight: 600;
-  background-color: #000000;
-  color: #FFFFFF;
 }
 
 .new-card-form button {
