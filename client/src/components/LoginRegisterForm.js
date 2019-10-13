@@ -3,7 +3,7 @@ import './LoginRegisterForm.css';
 
 export default function LoginRegisterForm(props) {
   return (
-    <>
+    <div className="login-form-container">
       <form className="login-form"
         onSubmit={(e) => {
         e.preventDefault()
@@ -53,6 +53,6 @@ export default function LoginRegisterForm(props) {
         
       </form>
       
-    </>
+    </div>
   )
 }

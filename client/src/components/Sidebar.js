@@ -11,7 +11,7 @@ export default function Sidebar(props) {
         <Link to="/" className="menu-item">Home</Link>
         <Link to="/decks" className="menu-item">Topics</Link>
 
-        { props.currentUser ? 
+        { props.currentUser && !props.currentUser.error ? 
           <ul className="bm-item-list ul-test">    
             <li className="menu-item"><Link to="/my-decks">My Decks</Link></li>
 

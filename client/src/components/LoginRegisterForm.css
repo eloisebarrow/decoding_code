@@ -1,3 +1,10 @@
+.login-form-container {
+  background-image: url('../images/login-background.jpg'); /* Photo by Markus Spiske on Unsplash */
+  background-size: cover;
+  width: 100%;
+  color: white;
+}
+
 .login-form {
   display: flex; 
   flex-direction: column;
@@ -5,16 +12,15 @@
   align-items: center;
   margin: 0 auto;
   width: 100%;
-  background-color: rgba(255, 143, 0, 0.5);
+  background-color: rgba(255,255,255,0.5);
 }
 
 .login-form input {
   border: none;
-  border-radius: 3%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   font-size: 1.5rem;
-  padding: 8% 13%;
-  background-color: #FFFFFF;
+  padding: 3% 7%;
+  background: transparent;
 }
 
 .submit-button, .login-form label, input {
@@ -39,6 +45,18 @@
   font-weight: 800;
 }
 
-.submit-button {
+.login-form .submit-button {
   margin-bottom: 3%;
+}
+
+@media screen and (min-width: 600px) {
+  .login-form input {
+    font-size: 1.3rem;
+    padding: 2% 4%;
+    width: 22rem;
+  }
+
+  .login-form .submit-button {
+    padding: 2% 13%;
+  }
 }
