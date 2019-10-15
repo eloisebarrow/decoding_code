@@ -14,6 +14,11 @@ body {
 .main-container {
   display: flex;
   justify-content: center;
+  flex: 2;
+}
+
+.footer-container {
+  flex: 1;
 }
 
 .App-link {
