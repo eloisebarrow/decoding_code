@@ -121,7 +121,7 @@ class App extends React.Component {
         error: ''
       });
       this.clearLoginForm();
-      this.props.history.push('/my-decks')
+      this.props.history.push('/')
     }
   }
 

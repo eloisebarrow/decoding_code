@@ -31,7 +31,8 @@
   }
 
   .example-card {
-    padding: 3% 11% 3% 11%;
+    width: 200px;
+    padding: 3% 10%;
   }
 
   .sub-headline {

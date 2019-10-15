@@ -84,4 +84,9 @@
     font-size: 1.15rem;
   }
 
+  .sign-up-btn {
+    width: 87px;
+    padding: 2% 3%;
+  }
+
 }
