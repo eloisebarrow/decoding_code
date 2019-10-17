@@ -56,13 +56,14 @@ class App extends React.Component {
   }
 
   clearCardForm = () => {
+    const { currentUser } = this.state;
     this.setState({
       newCardFormData: {
         deck_id: '',
         prompt: '',
         answer: '',
         is_public: false,
-        user_id: null,
+        user_id: currentUser.id
       }
     })
   }
