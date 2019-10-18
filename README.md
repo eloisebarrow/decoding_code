@@ -21,7 +21,7 @@ Topics will include:
 
 This website will be built mobile-first with a React front end, a Rails backend and the database will be built using PostgreSQL.
 
-User Stories: 
+## User Stories: 
 
 - A current Software Engineering student is trying to nail down a definition for the React lifecycle methods. They enter Decoding Code, locate the React deck and flip through flashcards on their train ride home.
 - A recent graduate of a Software Engineering bootcamp has a big interview to prepare for and they need to brush up on their general programming knowledge like MVC and oh yeah, what's a Promise again? They come to Decoding Code and review the General Programming deck as well as some SQL flashcards for good measure.
