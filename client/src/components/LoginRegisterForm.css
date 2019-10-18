@@ -59,6 +59,7 @@
   }
 
   .login-form .submit-button {
-    padding: 2% 13%;
+    padding: 2% 0;
+    width: 298px;
   }
 }
