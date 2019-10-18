@@ -6,12 +6,12 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users.with_faves
+    render json: @users
   end
 
   # GET /users/1
   def show
-    render json: @user.with_faves
+    render json: @user
   end
 
   # POST /users

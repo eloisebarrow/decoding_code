@@ -33,7 +33,7 @@ class App extends React.Component {
       },
       error: '',
       newCardFormData: {
-        deck_id: '',
+        deck_id: null,
         prompt: '',
         answer: '',
         is_public: false,
@@ -59,7 +59,7 @@ class App extends React.Component {
     const { currentUser } = this.state;
     this.setState({
       newCardFormData: {
-        deck_id: '',
+        deck_id: null,
         prompt: '',
         answer: '',
         is_public: false,
@@ -76,7 +76,7 @@ class App extends React.Component {
 
   handleCardFormError = () => {
     this.setState({
-      error: "Uh oh, missing info. Try again."
+      error: "Uh oh, something went wrong. Try again."
     })
   }
 
