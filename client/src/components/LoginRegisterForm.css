@@ -37,7 +37,9 @@
   color: #FFFFFF;
   border: none;
   border-radius: 4%;
-  padding: 3% 17%;
+  padding: 3% 0;
+  width: 141px;
+  text-align: center;
 }
 
 .error-message {

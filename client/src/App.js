@@ -103,6 +103,15 @@ class App extends React.Component {
         error: ''
       });
       this.clearLoginForm();
+      if (currentUser) {
+        this.setState( prevState => ({
+          currentUser,
+          newCardFormData: {
+            ...prevState.newCardFormData, 
+            user_id: currentUser.id
+          }
+        }))
+      }
       this.props.history.push('/');
     }
   }
@@ -120,14 +129,27 @@ class App extends React.Component {
         error: ''
       });
       this.clearLoginForm();
+      if (currentUser) {
+        this.setState( prevState => ({
+          currentUser,
+          newCardFormData: {
+            ...prevState.newCardFormData, 
+            user_id: currentUser.id
+          }
+        }))
+      }
       this.props.history.push('/')
     }
   }
 
   handleLogout = () => {
-    this.setState({
-      currentUser: null
-    })
+    this.setState( prevState => ({
+      currentUser: null,
+      newCardFormData: {
+        ...prevState.newCardFormData,
+        user_id: null
+      }
+    }))
     localStorage.removeItem('authToken');
   }
 
@@ -275,7 +297,7 @@ class App extends React.Component {
     // this.showFaves();
   }
 
-  render() {
+  render() {    
     return (
       <div className="App">
         <Header 
