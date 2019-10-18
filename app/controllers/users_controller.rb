@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
     if @user.save
       token = encode(user_id: @user.id, email: @user.email, first_name: @user.first_name, last_name: @user.last_name)
-      render json: { user: @user.with_faves, token: token }, status: :ok
+      render json: { user: @user, token: token }, status: :ok
     else
       render json: @user.errors, status: :unprocessable_entity
     end

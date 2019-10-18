@@ -101,11 +101,9 @@ class App extends React.Component {
       this.setState({
         currentUser,
         error: ''
-      }, () => {
-        this.props.history.push('/');
       });
       this.clearLoginForm();
-      
+      this.props.history.push('/');
     }
   }
 

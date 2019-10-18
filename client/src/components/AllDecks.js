@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Favorite from './Favorite';
 
 export default function AllDecks(props) {
-  console.log('alldeck props:', props)
   
   return (
     <div>

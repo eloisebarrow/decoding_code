@@ -45,7 +45,7 @@ export default function SingleDeck(props) {
               }
               })
             }
-            <Link to={!props.currentUser.error ? '/new-card' : '/login'}><li className="create-your-own">...Or create your own!</li></Link>
+            <Link to={props.currentUser && !props.currentUser.error ? '/new-card' : '/login'}><li className="create-your-own">...Or create your own!</li></Link>
           </ol>
         </div>
 

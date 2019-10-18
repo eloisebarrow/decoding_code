@@ -1,6 +1,6 @@
 const axios = require('axios');
 const api = axios.create({
-  // baseURL: 'http://localhost:3000' // development URL
+  //baseURL: 'http://localhost:3000' // development URL
   baseURL: 'https://decoding-code.herokuapp.com' // PRODUCTION 
 })
 
@@ -26,7 +26,8 @@ export const getCards = async () => {
 
 export const createCard = async (newCardData) => {
   try {
-    const resp = await api.post('/cards', { card: newCardData })
+    const resp = await api.post('/cards', { card: newCardData });
+    console.log('new card from api-helper', resp.data)
     return resp.data;
   } catch (e) {
     return { error: e.message };
@@ -85,7 +86,8 @@ export const loginUser = async (loginData) => {
     const resp = await api.post(`/auth/login`, loginData);
     localStorage.setItem('authToken', resp.data.token);
     api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
-    return resp.data.user
+    console.log(resp.data.user);
+    return resp.data.user;
   } catch (e) {
     return { error: e.message };
   }
@@ -93,7 +95,7 @@ export const loginUser = async (loginData) => {
 
 export const registerUser = async (registerData) => {
   try {
-    const resp = await api.post(`/users`, {user: registerData} );
+    const resp = await api.post(`/users`, { user: registerData } );
     localStorage.setItem('authToken', resp.data.token);
     api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`;
     return resp.data.user
