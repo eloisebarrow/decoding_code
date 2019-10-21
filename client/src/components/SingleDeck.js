@@ -5,13 +5,14 @@ import SingleCard from './SingleCard';
 
 export default function SingleDeck(props) {
   
-  const [currentCard, setCurrentCard] = React.useState(0)
-  const [isCardClicked, setIsCardClicked] = React.useState(false)
-
   const deck = props.decks.find( deck => deck.id.toString() === props.match.params.id );
+  
   if (!deck) {
     return <Redirect to="/decks" />
   }
+
+  const [currentCard, setCurrentCard] = React.useState(0)
+  const [isCardClicked, setIsCardClicked] = React.useState(false)
 
   let flipCard = () => {
     isCardClicked ? setIsCardClicked(false) : setIsCardClicked(true)

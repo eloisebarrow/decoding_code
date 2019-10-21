@@ -30,7 +30,7 @@ export default function Footer(props) {
           <h4>About</h4>
           <ul>
             <li><a href="https://github.com/eloisebarrow/decoding_code" target="_blank" rel="noopener noreferrer">Project</a></li>
-            <li><a href="https://medium.com/@eloiseressbarrow" target="_blank" rel="noopener noreferrer">Process</a></li>
+            <li><a href="https://medium.com/@eloiseressbarrow/planning-for-success-e32424e39237" target="_blank" rel="noopener noreferrer">Process</a></li>
           </ul>
         </div>
       </nav>

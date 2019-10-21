@@ -1,12 +1,9 @@
-.card-container {
-  border: 1px solid black;
-}
-
 .prompt-card {
   height: 118px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid black;
 }
 
 /* .answer-card:hover {
@@ -20,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
 } 
 /* 
 .prompt-card {

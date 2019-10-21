@@ -138,3 +138,7 @@ Frontend:
 **ERROR**: State would not recognize current user's ID in newCardFormData without refreshing the page, then would hold onto it after logout until refresh. This prevented logged in users from being able to create cards.
 
 **RESOLUTION**: Added a conditional to handleLogin and handleRegister to check if there's a current user - if there is, I set state of newCardFormData.user_id to current user's ID. On logout, I reset state of newCardFormData.user_id to null.
+
+**ERROR**: On editing a card, if the deck_id changes, user will be rerouted to new deck however edited card doesn't display until refresh. 
+
+**RESOLUTION**: TBD
