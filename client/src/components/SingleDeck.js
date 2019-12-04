@@ -1,18 +1,19 @@
 import React from 'react';
 import './SingleDeck.css';
+import './SingleCard.css';
 import { Link, Redirect } from 'react-router-dom';
 import SingleCard from './SingleCard';
 
 export default function SingleDeck(props) {
   
+  const [currentCard, setCurrentCard] = React.useState(0)
+  const [isCardClicked, setIsCardClicked] = React.useState(false)
+
   const deck = props.decks.find( deck => deck.id.toString() === props.match.params.id );
   
   if (!deck) {
     return <Redirect to="/decks" />
   }
-
-  const [currentCard, setCurrentCard] = React.useState(0)
-  const [isCardClicked, setIsCardClicked] = React.useState(false)
 
   let flipCard = () => {
     isCardClicked ? setIsCardClicked(false) : setIsCardClicked(true)
@@ -46,7 +47,9 @@ export default function SingleDeck(props) {
               }
               })
             }
-            <Link to={props.currentUser && !props.currentUser.error ? '/new-card' : '/login'}><li className="create-your-own">...Or create your own!</li></Link>
+            <Link to={props.currentUser && !props.currentUser.error ? '/new-card' : '/login'}>
+              <li className="create-your-own">...Or create your own!</li>
+            </Link>
           </ol>
         </div>
 
@@ -56,11 +59,11 @@ export default function SingleDeck(props) {
             currentCard={currentCard}
             isCardClicked={isCardClicked}
             flipCard={flipCard} />
-          <div className="flashcard-directions">
-            {/* <p>prev</p>
+          {/* <div className="flashcard-directions">
+            <p>prev</p>
             <p>1/10</p>
-            <p>next</p> */}
-          </div>
+            <p>next</p>
+          </div> */}
         </div>
       </div>
     </div>

@@ -45,7 +45,7 @@
 }
 
 @media screen and (min-width: 600px) {
-  .card-container {
+  /* .card-container {
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -54,10 +54,10 @@
     height: 13rem;
   }
 
-  .answer-card {
+  .prompt-card, .answer-card {
     height: 100%;
     width: 100%;
-  }
+  } */
 
   .prompt-text {
     padding: 3%;
@@ -66,5 +66,31 @@
   .answer-text {
     line-height: 1.7rem;
     font-size: 1.2rem;
+  }
+
+  /********* CARD ANIMATION FROM W3 SCHOOLS ******/
+  .card-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flashcard-container:hover, .card-container {
+    transform: rotateY(180deg);
+  }
+
+  .prompt-card, .answer-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* backface-visibility: hidden; */
+  }
+
+  .flip-card-back { 
+    transform: rotateY(180deg);
   }
 }
