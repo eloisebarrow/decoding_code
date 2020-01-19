@@ -19,7 +19,7 @@
   align-items: center;
   border: 1px solid black;
 } 
-/* 
+/*
 .prompt-card {
   transform: rotateX(30deg);
   animation: one 2s infinite;
@@ -85,12 +85,12 @@
 
   .prompt-card, .answer-card {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    /* backface-visibility: hidden; */
+    /* width: 100%;
+    height: 100%; */
+    backface-visibility: hidden;
   }
 
-  .flip-card-back { 
+  .answer-card {
     transform: rotateY(180deg);
   }
 }

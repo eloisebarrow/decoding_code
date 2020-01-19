@@ -7,7 +7,7 @@ import SingleCard from './SingleCard';
 export default function SingleDeck(props) {
   
   const [currentCard, setCurrentCard] = React.useState(0)
-  const [isCardClicked, setIsCardClicked] = React.useState(false)
+  const [isCardClicked, setIsCardClicked] = React.useState(true)
 
   const deck = props.decks.find( deck => deck.id.toString() === props.match.params.id );
   

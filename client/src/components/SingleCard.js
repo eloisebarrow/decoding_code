@@ -1,5 +1,6 @@
 import React from 'react';
 import './SingleCard.css';
+import './SingleDeck.css';
 // import './GetStarted.css';
 import { Link } from 'react-router-dom';
 
